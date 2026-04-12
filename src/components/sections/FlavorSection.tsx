@@ -39,13 +39,13 @@ export default function FlavorSection({ flavor, onMoreInfo, index }: Props) {
       />
       <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-[#0A0A08] via-[#0A0A08]/50 to-transparent" />
 
-      <div className="relative z-10 max-w-[480px] w-full px-6 text-center flex flex-col items-center">
-        <span className="font-body font-extralight text-[0.5rem] tracking-[0.3em] uppercase text-[#F2EDE4]/90 mb-2">
+      <div className="relative z-10 max-w-md w-full px-6 text-center flex flex-col items-center">
+        <span className="font-body font-extralight text-[0.5rem] tracking-[0.3em] uppercase text-[#F2EDE4]/80 mb-2">
           0{index + 1}
         </span>
 
         <motion.h2
-          className="font-display font-light text-[clamp(2rem,5vw,3.5rem)] tracking-[0.08em] uppercase text-[#F2EDE4] leading-[0.9] mb-1"
+          className="font-display font-light text-[clamp(1.5rem,4vw,2.5rem)] italic text-[#F2EDE4] mb-2"
           initial={{ y: 20, opacity: 0 }}
           animate={isVisible ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.85, ease: [0.25, 0.1, 0.25, 1] }}
@@ -54,7 +54,7 @@ export default function FlavorSection({ flavor, onMoreInfo, index }: Props) {
         </motion.h2>
 
         <motion.span
-          className="font-body font-extralight text-[0.75rem] tracking-[0.22em] uppercase text-[#F2EDE4] mb-4 block"
+          className="font-body font-extralight text-[0.75rem] tracking-[0.22em] uppercase text-[#F2EDE4] mb-2 block"
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.15 }}
@@ -62,7 +62,7 @@ export default function FlavorSection({ flavor, onMoreInfo, index }: Props) {
           {flavor.subtitle}
         </motion.span>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4 w-full">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-2 w-full">
           <motion.a
             href={WHATSAPP_URL}
             target="_blank"

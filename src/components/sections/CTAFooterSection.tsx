@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { MessageCircle } from "lucide-react";
-import { WHATSAPP_URL } from "@/lib/constants";
+import { WHATSAPP_URL, IMAGEKIT_BASE_URL } from "@/lib/constants";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -26,14 +26,14 @@ export default function CTAFooterSection() {
             transition={{ duration: 0.8 }}
           >
             <div className="w-[30px] h-[1px] bg-[#F2EDE4]/30" />
-            <span className="font-body font-extralight text-[0.5625rem] tracking-[0.28em] uppercase text-[#F2EDE4]/90">
+            <span className="font-body font-extralight text-[0.5625rem] tracking-[0.28em] uppercase text-[#F2EDE4]/80">
               Get Yours
             </span>
             <div className="w-[30px] h-[1px] bg-[#F2EDE4]/30" />
           </motion.div>
 
           <motion.h2
-            className="font-display italic font-light text-[clamp(2.5rem,6vw,5rem)] text-[#F2EDE4] leading-[1.0] mb-4"
+            className="font-display italic font-light text-[clamp(2rem,4.5vw,3.5rem)] text-[#F2EDE4] leading-[1.0] mb-4"
             initial={{ y: 20, opacity: 0 }}
             animate={isVisible ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
@@ -42,7 +42,7 @@ export default function CTAFooterSection() {
           </motion.h2>
 
           <motion.p
-            className="font-body font-extralight text-[0.875rem] tracking-[0.04em] text-[#F2EDE4]/75 leading-[1.8] max-w-[380px]"
+            className="font-body font-extralight text-[0.875rem] tracking-[0.04em] text-[#F2EDE4]/45 leading-[1.8] max-w-[380px]"
             initial={{ opacity: 0 }}
             animate={isVisible ? { opacity: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.15 }}
@@ -70,7 +70,7 @@ export default function CTAFooterSection() {
           </motion.a>
 
           <motion.span
-            className="font-body font-extralight text-[0.5625rem] tracking-[0.1em] uppercase text-[#F2EDE4] mt-4"
+            className="font-body font-extralight text-[0.5625rem] tracking-[0.1em] uppercase text-[#F2EDE4]/25 mt-4"
             initial={{ opacity: 0 }}
             animate={isVisible ? { opacity: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -82,9 +82,17 @@ export default function CTAFooterSection() {
 
       {/* FOOTER BAR */}
       <div className="w-full border-t border-[#F2EDE4]/[0.06] py-5 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between gap-4">
-        <span className="font-body font-extralight text-[0.5625rem] tracking-[0.06em] text-[#F2EDE4]/50 text-center md:text-left">
-          © 2025 Goacha Kombucha. All rights reserved.
-        </span>
+        <div className="flex items-center gap-4">
+          <img
+            src={`${IMAGEKIT_BASE_URL}/logo-white.png`}
+            alt="Goacha Logo"
+            className="h-4 object-contain opacity-50"
+          />
+          <span className="font-body font-extralight text-[0.5625rem] tracking-[0.06em] text-[#F2EDE4]/50 text-center md:text-left">
+            &copy; {new Date().getFullYear()} Goacha Kombucha. All rights
+            reserved.
+          </span>
+        </div>
         <div className="flex items-center gap-6">
           <Link
             to="/terms"

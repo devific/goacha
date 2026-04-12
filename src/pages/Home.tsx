@@ -1,32 +1,53 @@
-import { useFullPageScroll } from "@/hooks/useFullPageScroll"
-import { motion, AnimatePresence } from "motion/react"
-import { useState } from "react"
-import Navbar from "@/components/layout/Navbar"
-import HeroSection from "@/components/sections/HeroSection"
-import AboutSection from "@/components/sections/AboutSection"
-import FlavorSection from "@/components/sections/FlavorSection"
-import CTAFooterSection from "@/components/sections/CTAFooterSection"
-import FlavorSheet from "@/components/FlavorSheet"
-import { flavors } from "@/lib/flavorsData"
+import { useFullPageScroll } from "@/hooks/useFullPageScroll";
+import { motion, AnimatePresence } from "motion/react";
+import { useState } from "react";
+import Navbar from "@/components/layout/Navbar";
+import HeroSection from "@/components/sections/HeroSection";
+import AboutSection from "@/components/sections/AboutSection";
+import FlavorSection from "@/components/sections/FlavorSection";
+import CTAFooterSection from "@/components/sections/CTAFooterSection";
+import FlavorSheet from "@/components/FlavorSheet";
+import { flavors } from "@/lib/flavorsData";
 
-const TOTAL_SECTIONS = 6
+const TOTAL_SECTIONS = 6;
 
 export default function Home() {
-  const [sheetOpen, setSheetOpen] = useState(false)
-  const { currentSection, goTo } = useFullPageScroll(TOTAL_SECTIONS, sheetOpen)
-  const [activeFlavor, setActiveFlavor] = useState<number | null>(null)
+  const [sheetOpen, setSheetOpen] = useState(false);
+  const { currentSection, goTo } = useFullPageScroll(TOTAL_SECTIONS, sheetOpen);
+  const [activeFlavor, setActiveFlavor] = useState<number | null>(null);
 
   const sections = [
     <HeroSection key="hero" />,
     <AboutSection key="about" onScrollHint={() => goTo(2)} />,
-    <FlavorSection key="gh" flavor={flavors[0]} index={0} onMoreInfo={() => { setActiveFlavor(0); setSheetOpen(true) }} />,
-    <FlavorSection key="rr" flavor={flavors[1]} index={1} onMoreInfo={() => { setActiveFlavor(1); setSheetOpen(true) }} />,
-    <FlavorSection key="ib" flavor={flavors[2]} index={2} onMoreInfo={() => { setActiveFlavor(2); setSheetOpen(true) }} />,
+    <FlavorSection
+      key="gh"
+      flavor={flavors[0]}
+      index={0}
+      onMoreInfo={() => {
+        setActiveFlavor(0);
+        setSheetOpen(true);
+      }}
+    />,
+    <FlavorSection
+      key="rr"
+      flavor={flavors[1]}
+      index={1}
+      onMoreInfo={() => {
+        setActiveFlavor(1);
+        setSheetOpen(true);
+      }}
+    />,
+    <FlavorSection
+      key="ib"
+      flavor={flavors[2]}
+      index={2}
+      onMoreInfo={() => {
+        setActiveFlavor(2);
+        setSheetOpen(true);
+      }}
+    />,
     <CTAFooterSection key="cta" />,
-  ]
-
-  // On mobile, we render all sections in a normal scroll flow
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+  ];
 
   return (
     <>
@@ -40,8 +61,9 @@ export default function Home() {
             onClick={() => goTo(i)}
             className="w-1.5 h-1.5 rounded-full transition-all duration-300 border-none cursor-pointer p-0"
             style={{
-              background: i === currentSection ? '#F2EDE4' : 'rgba(242,237,228,0.25)',
-              transform: i === currentSection ? 'scale(1.4)' : 'scale(1)'
+              background:
+                i === currentSection ? "#F2EDE4" : "rgba(242,237,228,0.25)",
+              transform: i === currentSection ? "scale(1.4)" : "scale(1)",
             }}
             aria-label={`Go to section ${i + 1}`}
           />
@@ -49,7 +71,7 @@ export default function Home() {
       </div>
 
       {/* ── Full-page container ── */}
-      <div className="w-full h-screen overflow-hidden relative md:block hidden">
+      <div className="w-full h-screen overflow-hidden relative">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSection}
@@ -64,15 +86,6 @@ export default function Home() {
         </AnimatePresence>
       </div>
 
-      {/* ── Mobile container (natural scroll) ── */}
-      <div className="w-full h-full overflow-y-auto snap-y snap-mandatory md:hidden">
-        {sections.map((section, i) => (
-          <div key={i} className="w-full h-screen snap-start relative">
-            {section}
-          </div>
-        ))}
-      </div>
-
       {/* ── Flavor Sheet ── */}
       {activeFlavor !== null && (
         <FlavorSheet
@@ -82,5 +95,5 @@ export default function Home() {
         />
       )}
     </>
-  )
+  );
 }

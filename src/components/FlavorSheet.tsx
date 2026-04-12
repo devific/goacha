@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/sheet";
 import { X, MessageCircle, ArrowRight } from "lucide-react";
 import type { Flavor } from "@/lib/flavorsData";
-import { WHATSAPP_URL } from "@/lib/constants";
+import { WHATSAPP_URL, IMAGEKIT_BASE_URL } from "@/lib/constants";
 
 type Props = {
   flavor: Flavor;
@@ -41,7 +41,7 @@ export default function FlavorSheet({ flavor, open, onClose }: Props) {
           <div className="p-8">
             {/* About */}
             <div className="mb-7">
-              <h3 className="font-body font-extralight text-[0.5rem] tracking-[0.28em] uppercase text-[#F2EDE4]/90 mb-3">
+              <h3 className="font-body font-extralight text-[0.5rem] tracking-[0.28em] uppercase text-[#F2EDE4]/80 mb-3">
                 About this flavour
               </h3>
               <p className="font-body font-light text-[0.9375rem] leading-[1.85] text-[#F2EDE4]/65">
@@ -53,7 +53,7 @@ export default function FlavorSheet({ flavor, open, onClose }: Props) {
 
             {/* Ingredients */}
             <div className="mb-7">
-              <h3 className="font-body font-extralight text-[0.5rem] tracking-[0.28em] uppercase text-[#F2EDE4]/90 mb-3">
+              <h3 className="font-body font-extralight text-[0.5rem] tracking-[0.28em] uppercase text-[#F2EDE4]/80 mb-3">
                 Ingredients
               </h3>
               <div className="flex flex-col gap-1">
@@ -73,7 +73,7 @@ export default function FlavorSheet({ flavor, open, onClose }: Props) {
 
             {/* Nutritional Info */}
             <div className="mb-7">
-              <h3 className="font-body font-extralight text-[0.5rem] tracking-[0.28em] uppercase text-[#F2EDE4]/90 mb-3">
+              <h3 className="font-body font-extralight text-[0.5rem] tracking-[0.28em] uppercase text-[#F2EDE4]/80 mb-3">
                 Nutritional Info
               </h3>
               <div className="flex flex-col">
@@ -102,7 +102,7 @@ export default function FlavorSheet({ flavor, open, onClose }: Props) {
 
             {/* Product Details */}
             <div className="mb-7">
-              <h3 className="font-body font-extralight text-[0.5rem] tracking-[0.28em] uppercase text-[#F2EDE4]/90 mb-3">
+              <h3 className="font-body font-extralight text-[0.5rem] tracking-[0.28em] uppercase text-[#F2EDE4]/80 mb-3">
                 Product Details
               </h3>
               <div className="flex flex-col gap-2">
@@ -124,12 +124,17 @@ export default function FlavorSheet({ flavor, open, onClose }: Props) {
         </div>
 
         {/* FOOTER */}
-        <div className="p-6 px-8 border-t border-[#F2EDE4]/[0.08] bg-[#0F0F0D]">
+        <div className="p-6 px-8 border-t border-[#F2EDE4]/[0.08] bg-[#F2EDE4] flex flex-col items-center gap-5">
+          <img
+            src={`${IMAGEKIT_BASE_URL}/logo-black.png`}
+            alt="Goacha Logo"
+            className="h-5 object-contain opacity-80"
+          />
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-goacha btn-goacha-solid w-full justify-center"
+            className="btn-goacha w-full justify-center border-[#0A0A08] text-[#0A0A08] hover:bg-[#0A0A08]/5"
           >
             <MessageCircle size={13} strokeWidth={1.5} />
             Enquire on WhatsApp

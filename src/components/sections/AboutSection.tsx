@@ -19,14 +19,14 @@ export default function AboutSection({ onScrollHint }: Props) {
           transition={{ duration: 0.8 }}
         >
           <div className="w-[40px] h-[1px] bg-[#F2EDE4]/35" />
-          <span className="font-body font-extralight text-[0.5625rem] tracking-[0.28em] uppercase text-[#F2EDE4]/90">
+          <span className="font-body font-extralight text-[0.5625rem] tracking-[0.28em] uppercase text-[#F2EDE4]/80">
             About
           </span>
           <div className="w-[40px] h-[1px] bg-[#F2EDE4]/35" />
         </motion.div>
 
         <motion.h2
-          className="font-display italic font-light text-[clamp(2rem,5vw,3.5rem)] text-[#F2EDE4] leading-[1.1] mb-8"
+          className="font-display italic font-light text-[clamp(1.75rem,4vw,3rem)] text-[#F2EDE4] leading-[1.1] mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -36,7 +36,7 @@ export default function AboutSection({ onScrollHint }: Props) {
         </motion.h2>
 
         <motion.p
-          className="font-body font-light text-[0.9375rem] leading-[1.85] text-[#F2EDE4]/65 max-w-[440px] mb-8"
+          className="font-body font-light text-[0.9375rem] leading-[1.85] text-[#F2EDE4]/65 max-w-[440px]"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -47,9 +47,6 @@ export default function AboutSection({ onScrollHint }: Props) {
           ingredients and no shortcuts. Every bottle is alive with natural
           probiotics, naturally carbonated through fermentation, and made to
           support your gut, your energy, and your day.
-          <br />
-          <br />
-          Available locally in Goa. No mass production. Just good kombucha.
         </motion.p>
 
         <motion.div
