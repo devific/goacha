@@ -1,4 +1,4 @@
-import { useFullPageScroll, goTo } from "@/hooks/useFullPageScroll";
+import { useFullPageScroll } from "@/hooks/useFullPageScroll";
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
@@ -51,7 +51,11 @@ export default function Home() {
 
   return (
     <>
-      <Navbar goTo={goTo} />
+      <Navbar
+        goTo={goTo}
+        totalSections={TOTAL_SECTIONS}
+        currentSection={currentSection}
+      />
 
       {/* ── Section dot indicators (right side, Jaja-style) ── */}
       <div className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col gap-2.5">

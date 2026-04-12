@@ -93,7 +93,7 @@ export default function CTAFooterSection() {
 
       {/* FOOTER BAR */}
       <div className="w-full border-t border-stone-100/6 py-5 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between gap-4">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 max-lg:flex-col">
           <img
             src={`${IMAGEKIT_BASE_URL}/logo-white.png`}
             alt="Goacha Logo"
@@ -104,7 +104,7 @@ export default function CTAFooterSection() {
             reserved.
           </span>
         </div>
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 flex-wrap justify-center">
           <Link
             to="/terms"
             className="font-body  text-xs tracking-[0.06em] text-stone-100/80 hover:text-white transition-colors duration-200"
@@ -125,6 +125,14 @@ export default function CTAFooterSection() {
           >
             <Code2Icon className="h-4" />
             by Devific
+          </a>
+          <a
+            href={`//gavn.in/?ref=${window.location.hostname}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden"
+          >
+            Gavin Pereira
           </a>
         </div>
       </div>

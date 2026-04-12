@@ -3,7 +3,13 @@ import { MessageCircle } from "lucide-react";
 import { WHATSAPP_URL, IMAGEKIT_BASE_URL } from "@/lib/constants";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-export default function Navbar({ goTo }: { goTo: (index: number) => void }) {
+interface Props {
+  goTo: (index: number) => void;
+  totalSections: number;
+  currentSection: number;
+}
+
+export default function Navbar({ goTo, totalSections, currentSection }: Props) {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -15,6 +21,8 @@ export default function Navbar({ goTo }: { goTo: (index: number) => void }) {
       navigate("/");
     }
   };
+
+  const progress = (currentSection / (totalSections - 1)) * 100;
 
   return (
     <motion.nav
@@ -41,6 +49,12 @@ export default function Navbar({ goTo }: { goTo: (index: number) => void }) {
         <MessageCircle size={13} strokeWidth={1.5} />
         Enquire
       </a>
+      <div className="w-full md:hidden h-fit absolute bottom-0 left-0">
+        <div
+          className="w-full h-0.5 bg-white/20 transition-all duration-300"
+          style={{ width: `${progress}%` }}
+        ></div>
+      </div>
     </motion.nav>
   );
 }
