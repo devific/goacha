@@ -37,15 +37,15 @@ export default function FlavorSection({ flavor, onMoreInfo, index }: Props) {
         className="absolute inset-0"
         style={{ backgroundColor: flavor.overlayColor }}
       />
-      <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-[#0A0A08] via-[#0A0A08]/50 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-stone-950 via-stone-950/50 to-transparent" />
 
       <div className="relative z-10 max-w-md w-full px-6 text-center flex flex-col items-center">
-        <span className="font-body font-extralight text-[0.5rem] tracking-[0.3em] uppercase text-[#F2EDE4]/80 mb-2">
+        <span className="font-body font-extralight text-[0.5rem] tracking-[0.3em] uppercase text-stone-100/80 mb-2">
           0{index + 1}
         </span>
 
         <motion.h2
-          className="font-display italic font-light text-[clamp(2rem,4.5vw,3.5rem)] text-[#F2EDE4] leading-[1.0] mb-4 flex justify-center flex-wrap"
+          className="font-display italic font-light text-[clamp(2rem,4.5vw,3.5rem)] text-stone-100 leading-[1.0] mb-4 flex justify-center flex-wrap"
           initial="hidden"
           animate={isVisible ? "visible" : "hidden"}
           variants={{
@@ -74,7 +74,7 @@ export default function FlavorSection({ flavor, onMoreInfo, index }: Props) {
         </motion.h2>
 
         <motion.span
-          className="font-body font-extralight text-[0.75rem] tracking-[0.22em] uppercase text-[#F2EDE4] mb-2 block"
+          className="font-body font-extralight text-[0.75rem] tracking-[0.22em] uppercase text-stone-100 mb-2 block"
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.15 }}

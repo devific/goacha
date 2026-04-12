@@ -7,7 +7,7 @@ type Props = {
 export default function AboutSection({ onScrollHint }: Props) {
   return (
     <div
-      className="relative w-full h-full bg-[#0A0A08] flex items-center justify-center overflow-hidden mobile-section"
+      className="relative w-full h-full bg-stone-950 flex items-center justify-center overflow-hidden mobile-section"
       data-index={1}
     >
       <div className="max-w-[520px] w-full px-8 text-center flex flex-col items-center">
@@ -18,15 +18,15 @@ export default function AboutSection({ onScrollHint }: Props) {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="w-[40px] h-[1px] bg-[#F2EDE4]/35" />
-          <span className="font-body font-extralight text-[0.5625rem] tracking-[0.28em] uppercase text-[#F2EDE4]/70">
+          <div className="w-[40px] h-[1px] bg-stone-100/35" />
+          <span className="font-body font-extralight text-[0.5625rem] tracking-[0.28em] uppercase text-stone-100/70">
             About
           </span>
-          <div className="w-[40px] h-[1px] bg-[#F2EDE4]/35" />
+          <div className="w-[40px] h-[1px] bg-stone-100/35" />
         </motion.div>
 
         <motion.h2
-          className="font-display italic font-light text-[clamp(1.75rem,4vw,3rem)] text-[#F2EDE4] leading-[1.1] mb-8 flex justify-center flex-wrap"
+          className="font-display italic font-light text-[clamp(1.75rem,4vw,3rem)] text-stone-100 leading-[1.1] mb-8 flex justify-center flex-wrap"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -56,7 +56,7 @@ export default function AboutSection({ onScrollHint }: Props) {
         </motion.h2>
 
         <motion.p
-          className="font-body font-light text-[0.9375rem] leading-[1.85] text-[#F2EDE4]/65 max-w-[440px] mb-8"
+          className="font-body font-light text-[0.9375rem] leading-[1.85] text-stone-100/65 max-w-[440px] mb-8"
           initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
@@ -70,7 +70,7 @@ export default function AboutSection({ onScrollHint }: Props) {
         </motion.p>
 
         <motion.div
-          className="w-[40px] h-[1px] bg-[#F2EDE4]/20 my-8"
+          className="w-[40px] h-[1px] bg-stone-100/20 my-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -91,10 +91,10 @@ export default function AboutSection({ onScrollHint }: Props) {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 + i * 0.08 }}
             >
-              <span className="font-display italic font-light text-[1.75rem] text-[#F2EDE4]">
+              <span className="font-display italic font-light text-[1.75rem] text-stone-100">
                 {stat.num}
               </span>
-              <span className="font-body font-extralight text-[0.5625rem] tracking-[0.2em] uppercase text-[#F2EDE4]/40">
+              <span className="font-body font-light text-[0.5625rem] tracking-[0.2em] uppercase text-stone-100/80">
                 {stat.label}
               </span>
             </motion.div>

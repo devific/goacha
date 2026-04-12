@@ -1,4 +1,4 @@
-import { useFullPageScroll } from "@/hooks/useFullPageScroll";
+import { useFullPageScroll, goTo } from "@/hooks/useFullPageScroll";
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
@@ -51,7 +51,7 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
+      <Navbar goTo={goTo} />
 
       {/* ── Section dot indicators (right side, Jaja-style) ── */}
       <div className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col gap-2.5">
@@ -59,11 +59,11 @@ export default function Home() {
           <button
             key={i}
             onClick={() => goTo(i)}
-            className="w-1.5 h-1.5 rounded-full transition-all duration-300 border-none cursor-pointer p-0"
+            className="size-2 rounded-full transition-all duration-300 border-none cursor-pointer p-0"
             style={{
               background:
                 i === currentSection ? "#F2EDE4" : "rgba(242,237,228,0.25)",
-              transform: i === currentSection ? "scale(1.4)" : "scale(1)",
+              transform: i === currentSection ? "scale(1.5)" : "scale(1)",
             }}
             aria-label={`Go to section ${i + 1}`}
           />

@@ -1,8 +1,21 @@
 import { motion } from "motion/react";
 import { MessageCircle } from "lucide-react";
 import { WHATSAPP_URL, IMAGEKIT_BASE_URL } from "@/lib/constants";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar({ goTo }: { goTo: (index: number) => void }) {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (location.pathname === "/") {
+      e.preventDefault();
+      goTo(0);
+    } else {
+      navigate("/");
+    }
+  };
+
   return (
     <motion.nav
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between py-2"
@@ -11,11 +24,13 @@ export default function Navbar() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
     >
-      <img
-        src={`${IMAGEKIT_BASE_URL}/logo-white.png`}
-        alt="Goacha Logo"
-        className="h-6 md:h-8 object-contain"
-      />
+      <Link to="/" onClick={handleLogoClick}>
+        <img
+          src={`${IMAGEKIT_BASE_URL}/logo-white.png`}
+          alt="Goacha Logo"
+          className="h-6 md:h-8 object-contain cursor-pointer"
+        />
+      </Link>
 
       <a
         href={WHATSAPP_URL}

@@ -21,12 +21,12 @@ export default function HeroSection() {
           referrerPolicy="no-referrer"
         />
       </picture>
-      <div className="absolute inset-0 bg-[rgba(8,8,6,0.2)]" />
-      <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-[#0A0A08] via-[#0A0A08]/40 to-transparent" />
+      <div className="absolute inset-0 bg-stone-950/20" />
+      <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-stone-950 via-stone-950/40 to-transparent" />
 
       <div className="relative z-10 max-w-[600px] w-full px-6 text-center flex flex-col items-center">
         <motion.span
-          className="font-body font-extralight text-[0.625rem] tracking-[0.25em] uppercase text-[#F2EDE4]/90 mb-2 hidden"
+          className="font-body font-extralight text-[0.625rem] tracking-[0.25em] uppercase text-stone-100/90 mb-2 hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -64,7 +64,7 @@ export default function HeroSection() {
         </motion.h1>
 
         <motion.span
-          className="font-body font-extralight text-[0.75rem] tracking-[0.28em] mt-1 uppercase text-[#F2EDE4]/80"
+          className="font-body font-extralight text-[0.75rem] tracking-[0.28em] mt-1 uppercase text-stone-100/80"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.9 }}
@@ -97,7 +97,7 @@ export default function HeroSection() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 1.5 }}
       >
-        <span className="font-body font-extralight text-[0.5625rem] tracking-[0.22em] uppercase text-[#F2EDE4]/80 hidden">
+        <span className="font-body font-extralight text-[0.5625rem] tracking-[0.22em] uppercase text-stone-100/80 hidden">
           Scroll to explore
         </span>
         <motion.div
@@ -106,7 +106,7 @@ export default function HeroSection() {
         >
           <ArrowDown
             size={14}
-            className="text-[#F2EDE4]/80"
+            className="text-stone-100/80"
             strokeWidth={1.5}
           />
         </motion.div>
