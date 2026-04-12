@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400&display=swap');
+
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-background: hsl(0 0% 4%);
+  --color-foreground: hsl(40 15% 94%);
+  --color-card: hsl(0 0% 6%);
+  --color-card-foreground: hsl(40 15% 94%);
+  --color-popover: hsl(0 0% 6%);
+  --color-popover-foreground: hsl(40 15% 94%);
+  --color-primary: hsl(40 15% 94%);
+  --color-primary-foreground: hsl(0 0% 4%);
+  --color-secondary: hsl(0 0% 12%);
+  --color-secondary-foreground: hsl(40 15% 94%);
+  --color-muted: hsl(0 0% 14%);
+  --color-muted-foreground: hsl(40 8% 55%);
+  --color-accent: hsl(0 0% 14%);
+  --color-accent-foreground: hsl(40 15% 94%);
+  --color-destructive: hsl(0 72% 51%);
+  --color-destructive-foreground: hsl(0 0% 100%);
+  --color-border: hsl(0 0% 18%);
+  --color-input: hsl(0 0% 18%);
+  --color-ring: hsl(40 15% 94%);
+  --radius: 0rem;
+
+  --color-gc-cream: #F2EDE4;
+  --color-gc-black: #0A0A08;
+  --color-gc-dim: rgba(242,237,228,0.65);
+  --color-gc-faint: rgba(242,237,228,0.15);
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Jost', system-ui, sans-serif;
+}
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+  }
+
+  html, body {
+    width: 100%; height: 100%;
+    overflow: hidden;
+    background-color: var(--color-gc-black);
+    color: var(--color-gc-cream);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  @media (max-width: 768px) {
+    html, body {
+      overflow-y: auto;
+      scroll-snap-type: y mandatory;
+    }
+  }
+}
+
+@layer components {
+  .btn-goacha {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-body);
+    font-size: 0.6875rem;
+    font-weight: 300;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-gc-cream);
+    background: transparent;
+    border: 1px solid rgba(242,237,228,0.15);
+    padding: 12px 28px;
+    cursor: pointer;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+  }
+  .btn-goacha:hover {
+    background-color: var(--color-gc-faint);
+    border-color: rgba(242,237,228,0.4);
+  }
+  .btn-goacha-solid {
+    background-color: var(--color-gc-cream);
+    color: var(--color-gc-black);
+    border-color: var(--color-gc-cream);
+  }
+  .btn-goacha-solid:hover {
+    background-color: rgba(242,237,228,0.85);
+  }
+}
