@@ -19,28 +19,48 @@ export default function AboutSection({ onScrollHint }: Props) {
           transition={{ duration: 0.8 }}
         >
           <div className="w-[40px] h-[1px] bg-[#F2EDE4]/35" />
-          <span className="font-body font-extralight text-[0.5625rem] tracking-[0.28em] uppercase text-[#F2EDE4]/80">
+          <span className="font-body font-extralight text-[0.5625rem] tracking-[0.28em] uppercase text-[#F2EDE4]/70">
             About
           </span>
           <div className="w-[40px] h-[1px] bg-[#F2EDE4]/35" />
         </motion.div>
 
         <motion.h2
-          className="font-display italic font-light text-[clamp(1.75rem,4vw,3rem)] text-[#F2EDE4] leading-[1.1] mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          className="font-display italic font-light text-[clamp(1.75rem,4vw,3rem)] text-[#F2EDE4] leading-[1.1] mb-8 flex justify-center flex-wrap"
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.1 }}
+          variants={{
+            visible: {
+              transition: { staggerChildren: 0.1, delayChildren: 0.1 },
+            },
+          }}
         >
-          Small Batch. Big Life.
+          {"Small Batch. Big Life.".split(" ").map((word, i) => (
+            <motion.span
+              key={i}
+              variants={{
+                hidden: { opacity: 0, y: 30, filter: "blur(8px)" },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  filter: "blur(0px)",
+                  transition: { duration: 0.85, ease: [0.25, 0.1, 0.25, 1] },
+                },
+              }}
+              className="inline-block mr-[0.25em] last:mr-0"
+            >
+              {word}
+            </motion.span>
+          ))}
         </motion.h2>
 
         <motion.p
-          className="font-body font-light text-[0.9375rem] leading-[1.85] text-[#F2EDE4]/65 max-w-[440px]"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          className="font-body font-light text-[0.9375rem] leading-[1.85] text-[#F2EDE4]/65 max-w-[440px] mb-8"
+          initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
         >
           Goacha is a Goa-born kombucha brewed in small batches — raw,
           unfiltered, and full of life. We ferment with care, using real

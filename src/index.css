@@ -85,6 +85,6 @@
     border-color: var(--color-gc-cream);
   }
   .btn-goacha-solid:hover {
-    background-color: rgba(242, 237, 228, 0.85);
+    background-color: rgba(242, 237, 228, 0.75);
   }
 }

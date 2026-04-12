@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { MessageCircle } from "lucide-react";
+import { Code2Icon, CodeIcon, MessageCircle } from "lucide-react";
 import { WHATSAPP_URL, IMAGEKIT_BASE_URL } from "@/lib/constants";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -26,26 +26,46 @@ export default function CTAFooterSection() {
             transition={{ duration: 0.8 }}
           >
             <div className="w-[30px] h-[1px] bg-[#F2EDE4]/30" />
-            <span className="font-body font-extralight text-[0.5625rem] tracking-[0.28em] uppercase text-[#F2EDE4]/80">
+            <span className="font-body  text-xs tracking-[0.28em] uppercase text-[#F2EDE4]/70">
               Get Yours
             </span>
             <div className="w-[30px] h-[1px] bg-[#F2EDE4]/30" />
           </motion.div>
 
           <motion.h2
-            className="font-display italic font-light text-[clamp(2rem,4.5vw,3.5rem)] text-[#F2EDE4] leading-[1.0] mb-4"
-            initial={{ y: 20, opacity: 0 }}
-            animate={isVisible ? { y: 0, opacity: 1 } : {}}
-            transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+            className="font-display italic font-light text-[clamp(2rem,4.5vw,3.5rem)] text-[#F2EDE4] leading-[1.0] mb-4 flex justify-center flex-wrap"
+            initial="hidden"
+            animate={isVisible ? "visible" : "hidden"}
+            variants={{
+              visible: {
+                transition: { staggerChildren: 0.1, delayChildren: 0.1 },
+              },
+            }}
           >
-            Taste the Culture
+            {"Taste the Culture".split(" ").map((word, i) => (
+              <motion.span
+                key={i}
+                variants={{
+                  hidden: { opacity: 0, y: 30, filter: "blur(8px)" },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    filter: "blur(0px)",
+                    transition: { duration: 0.85, ease: [0.25, 0.1, 0.25, 1] },
+                  },
+                }}
+                className="inline-block mr-[0.25em] last:mr-0"
+              >
+                {word}
+              </motion.span>
+            ))}
           </motion.h2>
 
           <motion.p
-            className="font-body font-extralight text-[0.875rem] tracking-[0.04em] text-[#F2EDE4]/45 leading-[1.8] max-w-[380px]"
-            initial={{ opacity: 0 }}
-            animate={isVisible ? { opacity: 1 } : {}}
-            transition={{ duration: 0.8, delay: 0.15 }}
+            className="font-body  text-[0.875rem] tracking-[0.04em] text-[#F2EDE4]/45 leading-[1.8] max-w-[380px]"
+            initial={{ opacity: 0, y: 10, filter: "blur(4px)" }}
+            animate={isVisible ? { opacity: 1, y: 0, filter: "blur(0px)" } : {}}
+            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
           >
             Available in Goa at local markets, cafes, and through direct
             enquiry.
@@ -68,15 +88,6 @@ export default function CTAFooterSection() {
             <MessageCircle size={14} strokeWidth={1.5} />
             Enquire on WhatsApp
           </motion.a>
-
-          <motion.span
-            className="font-body font-extralight text-[0.5625rem] tracking-[0.1em] uppercase text-[#F2EDE4]/25 mt-4"
-            initial={{ opacity: 0 }}
-            animate={isVisible ? { opacity: 1 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            Available at Saukhyam India and Clean Food Market, Anjuna
-          </motion.span>
         </div>
       </div>
 
@@ -88,7 +99,7 @@ export default function CTAFooterSection() {
             alt="Goacha Logo"
             className="h-4 object-contain opacity-50"
           />
-          <span className="font-body font-extralight text-[0.5625rem] tracking-[0.06em] text-[#F2EDE4]/50 text-center md:text-left">
+          <span className="font-body  text-xs tracking-[0.06em] text-[#F2EDE4]/50 text-center md:text-left">
             &copy; {new Date().getFullYear()} Goacha Kombucha. All rights
             reserved.
           </span>
@@ -96,16 +107,25 @@ export default function CTAFooterSection() {
         <div className="flex items-center gap-6">
           <Link
             to="/terms"
-            className="font-body font-extralight text-[0.5625rem] tracking-[0.06em] text-[#F2EDE4]/80 hover:text-white transition-colors duration-200"
+            className="font-body  text-xs tracking-[0.06em] text-[#F2EDE4]/80 hover:text-white transition-colors duration-200"
           >
             Terms & Conditions
           </Link>
           <Link
             to="/privacy"
-            className="font-body font-extralight text-[0.5625rem] tracking-[0.06em] text-[#F2EDE4]/80 hover:text-white transition-colors duration-200"
+            className="font-body  text-xs tracking-[0.06em] text-[#F2EDE4]/80 hover:text-white transition-colors duration-200"
           >
             Privacy Policy
           </Link>
+          <a
+            href={`//devific.in/?ref=${window.location.hostname}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-body flex  items-center text-xs tracking-[0.06em] text-[#F2EDE4]/80 hover:text-white transition-colors duration-200"
+          >
+            <Code2Icon className="h-4" />
+            by Devific
+          </a>
         </div>
       </div>
     </div>

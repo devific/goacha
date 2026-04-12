@@ -35,12 +35,32 @@ export default function HeroSection() {
         </motion.span>
 
         <motion.h1
-          className="font-display font-light text-[clamp(1.75rem,4vw,3rem)] italic text-[#F2EDE4] mb-2"
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1.0, ease: [0.25, 0.1, 0.25, 1], delay: 0.4 }}
+          className="font-display font-light text-[clamp(1.75rem,4vw,3rem)]  italic mb-2 flex justify-center italic"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            visible: {
+              transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+            },
+          }}
         >
-          Feel the Gut Love
+          {"Feel the Gut Love".split("").map((char, i) => (
+            <motion.span
+              key={i}
+              variants={{
+                hidden: { opacity: 0, y: 40, filter: "blur(10px)" },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  filter: "blur(0px)",
+                  transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] },
+                },
+              }}
+              className="inline-block"
+            >
+              {char === " " ? "\u00A0" : char}
+            </motion.span>
+          ))}
         </motion.h1>
 
         <motion.span
