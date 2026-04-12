@@ -71,7 +71,7 @@ export default function Home() {
       </div>
 
       {/* ── Full-page container ── */}
-      <div className="w-full h-screen overflow-hidden relative">
+      <div className="w-full h-svh overflow-hidden relative">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSection}

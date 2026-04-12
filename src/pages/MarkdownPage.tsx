@@ -15,7 +15,7 @@ export default function MarkdownPage({ title, content }: Props) {
   }, []);
 
   return (
-    <div className="min-h-screen bg-stone-950 text-stone-100 overflow-y-auto w-full">
+    <div className="min-h-svh bg-stone-950 text-stone-100 overflow-y-auto w-full">
       <div className="max-w-3xl mx-auto px-6 py-24">
         <Link
           to="/"
