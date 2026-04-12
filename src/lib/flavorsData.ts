@@ -32,8 +32,8 @@ export const flavors: Flavor[] = [
       "Organic Green Tea · Raw Cane Sugar · Live SCOBY Culture · Fresh Apple · Chamomile Flowers",
     description:
       "Golden Hour is our softest brew — a gentle, golden ferment of green tea layered with the sweetness of apple and the calm of chamomile. Delicate, floral, and mellow. Best sipped slowly.",
-    image: `${IMAGEKIT_BASE_URL}/gh.jpg?tr=w-1920,h-1080,fo-auto,q-85`,
-    imageMobile: `${IMAGEKIT_BASE_URL}/gh.jpg?tr=w-768,h-1024,fo-auto,q-80`,
+    image: `${IMAGEKIT_BASE_URL}/gh.jpg?tr=h-1080,fo-auto,q-85`,
+    imageMobile: `${IMAGEKIT_BASE_URL}/gh-phone.png?tr=w-1080,fo-auto,q-80`,
     overlayColor: "rgba(20,14,4,0.38)",
     accentColor: "#D4A85A",
     nutritional: {
@@ -63,8 +63,8 @@ export const flavors: Flavor[] = [
       "Organic Black Tea · Raw Cane Sugar · Live SCOBY Culture · Dried Hibiscus · Fresh Mint · Lime · Ginger Root",
     description:
       "Red Ruse is our most vibrant brew — a deep ruby ferment with the tartness of hibiscus, a cool finish of mint, a citrus zing from lime, and a warming kick of fresh ginger. Complex and alive.",
-    image: `${IMAGEKIT_BASE_URL}/rr.jpg?tr=w-1920,h-1080,fo-auto,q-85`,
-    imageMobile: `${IMAGEKIT_BASE_URL}/rr.jpg?tr=w-768,h-1024,fo-auto,q-80`,
+    image: `${IMAGEKIT_BASE_URL}/rr.jpg?tr=h-1080,fo-auto,q-85`,
+    imageMobile: `${IMAGEKIT_BASE_URL}/rr-phone.png?tr=w-1080,fo-auto,q-80`,
     overlayColor: "rgba(20,4,6,0.40)",
     accentColor: "#C45A6A",
     nutritional: {
@@ -94,8 +94,8 @@ export const flavors: Flavor[] = [
       "Organic Green Tea · Raw Cane Sugar · Live SCOBY Culture · Fresh Lemongrass · Ginger Root",
     description:
       "Inner Bliss is our most grounding brew — a clean, pale-gold ferment with the earthy brightness of lemongrass and a long, warming finish of fresh ginger. The one you reach for when you want to feel good.",
-    image: `${IMAGEKIT_BASE_URL}/ib.jpg?tr=w-1920,h-1080,fo-auto,q-85`,
-    imageMobile: `${IMAGEKIT_BASE_URL}/ib.jpg?tr=w-768,h-1024,fo-auto,q-80`,
+    image: `${IMAGEKIT_BASE_URL}/ib.jpg?tr=h-1080,fo-auto,q-85`,
+    imageMobile: `${IMAGEKIT_BASE_URL}/ib-phone.png?tr=w-1080,fo-auto,q-80`,
     overlayColor: "rgba(4,14,10,0.38)",
     accentColor: "#7AAF82",
     nutritional: {
