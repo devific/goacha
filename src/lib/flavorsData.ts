@@ -48,8 +48,8 @@ export const flavors: Flavor[] = [
     ingredients:
       "Filtered H20, Kombucha Culture, Loose leaf Green Tea & Black Tea, Cane Sugar, Apple & Chamomile.",
     description: "Made for slow evenings and easy conversations.",
-    image: `${IMAGEKIT_BASE_URL}/gh.jpg?tr=h-1080,fo-auto,q-85`,
-    imageMobile: `${IMAGEKIT_BASE_URL}/gh-phone.png?tr=w-1080,fo-auto,q-80`,
+    image: `${IMAGEKIT_BASE_URL}/gh-dp-fill.jpg?tr=h-1080,fo-auto,q-85`,
+    imageMobile: `${IMAGEKIT_BASE_URL}/gh-mb-fill.jpg?tr=w-1080,fo-auto,q-80`,
     overlayColor: "rgba(20,14,4,0.38)",
     accentColor: "#D4A85A",
     nutritional: {
@@ -75,8 +75,8 @@ export const flavors: Flavor[] = [
     ingredients:
       "Filtered H20, Kombucha Culture, Loose leaf Green Tea & Black Tea, Cane Sugar, Ginger, Dried Hibiscus, Mint & Lime.",
     description: "When you want something a little different.",
-    image: `${IMAGEKIT_BASE_URL}/rr.jpg?tr=h-1080,fo-auto,q-85`,
-    imageMobile: `${IMAGEKIT_BASE_URL}/rr-phone.png?tr=w-1080,fo-auto,q-80`,
+    image: `${IMAGEKIT_BASE_URL}/rr-dp-fill.jpg?tr=h-1080,fo-auto,q-85`,
+    imageMobile: `${IMAGEKIT_BASE_URL}/rr-mb-fill.jpg?tr=w-1080,fo-auto,q-80`,
     overlayColor: "rgba(20,4,6,0.40)",
     accentColor: "#C45A6A",
     nutritional: {
@@ -102,8 +102,8 @@ export const flavors: Flavor[] = [
     ingredients:
       "Filtered H20, Kombucha Culture, Lose leaf Green Tea & Black Tea, Cane Sugar, Lemongrass & Ginger.",
     description: "Your everyday reset.",
-    image: `${IMAGEKIT_BASE_URL}/ib.jpg?tr=h-1080,fo-auto,q-85`,
-    imageMobile: `${IMAGEKIT_BASE_URL}/ib-phone.png?tr=w-1080,fo-auto,q-80`,
+    image: `${IMAGEKIT_BASE_URL}/ib-dp-fill.jpg?tr=h-1080,fo-auto,q-85`,
+    imageMobile: `${IMAGEKIT_BASE_URL}/ib-mb-fill.jpg?tr=w-1080,fo-auto,q-80`,
     overlayColor: "rgba(4,14,10,0.38)",
     accentColor: "#7AAF82",
     nutritional: {
