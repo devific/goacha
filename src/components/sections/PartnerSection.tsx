@@ -71,7 +71,7 @@ export default function PartnerSection() {
         </motion.div>
 
         <motion.div
-          className="flex flex-col gap-3 mb-10 text-left w-full max-w-[320px]"
+          className="flex flex-col gap-3 mb-10 text-left w-full max-w-[320px] bg-white/10 rounded p-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -83,7 +83,7 @@ export default function PartnerSection() {
             "Premium product with approachable pricing",
           ].map((point, i) => (
             <div key={i} className="flex items-start gap-3">
-              <Check size={16} className="text-stone-100/50 mt-1 shrink-0" />
+              <Check size={16} className="text-green-500/50 mt-1 shrink-0" />
               <span className="font-body font-light text-sm text-stone-100/80">
                 {point}
               </span>

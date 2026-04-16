@@ -10,7 +10,7 @@ export default function AboutSection({ onScrollHint }: Props) {
       className="relative w-full h-full bg-stone-950 flex items-center justify-center overflow-hidden mobile-section"
       data-index={1}
     >
-      <div className="max-w-3xl w-full px-8 text-center flex flex-col items-center">
+      <div className="max-w-3xl w-full px-4 lg:px-8 text-center flex flex-col items-center">
         <motion.div
           className="flex items-center gap-4 mb-8"
           initial={{ opacity: 0, y: 10 }}
@@ -56,7 +56,7 @@ export default function AboutSection({ onScrollHint }: Props) {
         </motion.h2>
 
         <motion.div
-          className="font-body font-light text-[0.9375rem] leading-[1.85] text-stone-100/65 max-w-xl mb-8 space-y-2"
+          className="font-body font-light text-sm leading-[1.85] text-stone-100/65 max-w-xl mb-8 space-y-2"
           initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
@@ -87,7 +87,7 @@ export default function AboutSection({ onScrollHint }: Props) {
         </motion.div>
 
         <motion.div
-          className="w-[40px] h-[1px] bg-stone-100/20 my-8"
+          className="w-[40px] h-[1px] bg-stone-100/20 max-md:hidden my-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
