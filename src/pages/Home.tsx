@@ -10,6 +10,7 @@ import PartnerSection from "@/components/sections/PartnerSection";
 import CTAFooterSection from "@/components/sections/CTAFooterSection";
 import FlavorSheet from "@/components/FlavorSheet";
 import { flavors } from "@/lib/flavorsData";
+import { SEO } from "@/components/SEO";
 
 const TOTAL_SECTIONS = 8;
 
@@ -75,6 +76,7 @@ export default function Home() {
 
   return (
     <>
+      <SEO />
       <Navbar
         goTo={goTo}
         totalSections={TOTAL_SECTIONS}
