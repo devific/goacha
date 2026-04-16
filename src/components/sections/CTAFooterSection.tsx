@@ -22,12 +22,12 @@ export default function CTAFooterSection() {
           <motion.div
             className="flex items-center gap-4 mb-6"
             initial={{ opacity: 0, y: 10 }}
-            animate={isVisible ? { opacity: 1, y: 0 } : {}}
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
             transition={{ duration: 0.8 }}
           >
             <div className="w-[30px] h-[1px] bg-stone-100/30" />
             <span className="font-body  text-xs tracking-[0.28em] uppercase text-stone-100/70">
-              Get Yours
+              Get Goacha Delivered
             </span>
             <div className="w-[30px] h-[1px] bg-stone-100/30" />
           </motion.div>
@@ -61,23 +61,15 @@ export default function CTAFooterSection() {
             ))}
           </motion.h2>
 
-          <motion.p
-            className="font-body  text-[0.875rem] tracking-[0.04em] text-stone-100/45 leading-[1.8] max-w-[380px]"
-            initial={{ opacity: 0, y: 10, filter: "blur(4px)" }}
-            animate={isVisible ? { opacity: 1, y: 0, filter: "blur(0px)" } : {}}
-            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-          >
-            Available in Goa at local markets, cafes, and through direct
-            enquiry.
-          </motion.p>
-
           <motion.a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-goacha btn-goacha-solid mt-9 px-10 py-3.5 text-[0.75rem]"
             initial={{ opacity: 0, scale: 0.96 }}
-            animate={isVisible ? { opacity: 1, scale: 1 } : {}}
+            animate={
+              isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.96 }
+            }
             transition={{
               type: "spring",
               stiffness: 100,
@@ -85,8 +77,8 @@ export default function CTAFooterSection() {
               delay: 0.3,
             }}
           >
-            <MessageCircle size={14} strokeWidth={1.5} />
-            Enquire on WhatsApp
+            <MessageCircle size={14} strokeWidth={1.5} className="mr-2" />
+            Order on WhatsApp
           </motion.a>
         </div>
       </div>

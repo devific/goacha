@@ -57,12 +57,11 @@ export default function FlavorSheet({ flavor, open, onClose }: Props) {
                 Ingredients
               </h3>
               <div className="flex flex-col gap-1">
-                {flavor.ingredients.split("·").map((ing, i) => (
+                {flavor.ingredients.split(",").map((ing, i) => (
                   <div
                     key={i}
                     className="font-body font-light text-[0.875rem] text-stone-100/55 leading-[2.0]"
                   >
-                    <span className="mr-2 opacity-50">·</span>
                     {ing.trim()}
                   </div>
                 ))}
@@ -77,24 +76,44 @@ export default function FlavorSheet({ flavor, open, onClose }: Props) {
                 Nutritional Info
               </h3>
               <div className="flex flex-col">
-                {Object.entries(flavor.nutritional).map(([key, value]) => {
-                  const formattedKey = key
-                    .replace(/([A-Z])/g, " $1")
-                    .replace(/^./, (str) => str.toUpperCase());
-                  return (
-                    <div
-                      key={key}
-                      className="flex justify-between items-center py-2.5 border-b border-stone-100/6 last:border-0"
-                    >
-                      <span className="font-body font-light text-[0.8125rem] text-stone-100/40">
-                        {formattedKey}
-                      </span>
-                      <span className="font-body font-normal text-[0.8125rem] text-stone-100/75">
-                        {value}
-                      </span>
-                    </div>
-                  );
-                })}
+                <div className="flex justify-between items-center py-2.5 border-b border-stone-100/6">
+                  <span className="font-body font-light text-[0.8125rem] text-stone-100/40">
+                    Serving Size
+                  </span>
+                  <span className="font-body font-normal text-[0.8125rem] text-stone-100/75">
+                    {flavor.nutritional.servingSize}
+                  </span>
+                </div>
+                <div className="py-2.5 border-b border-stone-100/6">
+                  <span className="font-body font-light text-[0.8125rem] text-stone-100/40 block mb-2">
+                    Per 100ml
+                  </span>
+                  {Object.entries(flavor.nutritional.per100ml).map(
+                    ([key, value]) => {
+                      const formattedKey = key
+                        .replace(/([A-Z])/g, " $1")
+                        .replace(/^./, (str) => str.toUpperCase());
+                      return (
+                        <div
+                          key={key}
+                          className="flex justify-between items-center py-1"
+                        >
+                          <span className="font-body font-light text-[0.8125rem] text-stone-100/40">
+                            {formattedKey}
+                          </span>
+                          <span className="font-body font-normal text-[0.8125rem] text-stone-100/75">
+                            {value}
+                          </span>
+                        </div>
+                      );
+                    },
+                  )}
+                </div>
+                <div className="py-2.5">
+                  <span className="font-body font-light text-[0.65rem] text-stone-100/40 italic">
+                    {flavor.nutritional.disclaimer}
+                  </span>
+                </div>
               </div>
             </div>
 
@@ -136,8 +155,8 @@ export default function FlavorSheet({ flavor, open, onClose }: Props) {
             rel="noopener noreferrer"
             className="btn-goacha w-full justify-center border-stone-950 text-stone-950 hover:bg-stone-950/5"
           >
-            <MessageCircle size={13} strokeWidth={1.5} />
-            Enquire on WhatsApp
+            <MessageCircle size={13} strokeWidth={1.5} className="mr-2" />
+            Order on WhatsApp
           </a>
         </div>
       </SheetContent>

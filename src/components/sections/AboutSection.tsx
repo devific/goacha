@@ -10,7 +10,7 @@ export default function AboutSection({ onScrollHint }: Props) {
       className="relative w-full h-full bg-stone-950 flex items-center justify-center overflow-hidden mobile-section"
       data-index={1}
     >
-      <div className="max-w-[520px] w-full px-8 text-center flex flex-col items-center">
+      <div className="max-w-3xl w-full px-8 text-center flex flex-col items-center">
         <motion.div
           className="flex items-center gap-4 mb-8"
           initial={{ opacity: 0, y: 10 }}
@@ -55,19 +55,36 @@ export default function AboutSection({ onScrollHint }: Props) {
           ))}
         </motion.h2>
 
-        <motion.p
-          className="font-body font-light text-[0.9375rem] leading-[1.85] text-stone-100/65 max-w-[440px] mb-8"
+        <motion.div
+          className="font-body font-light text-[0.9375rem] leading-[1.85] text-stone-100/65 max-w-xl mb-8 space-y-2"
           initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
         >
-          Goacha is a Goa-born kombucha brewed in small batches — raw,
-          unfiltered, and full of life. We ferment with care, using real
-          ingredients and no shortcuts. Every bottle is alive with natural
-          probiotics, naturally carbonated through fermentation, and made to
-          support your gut, your energy, and your day.
-        </motion.p>
+          <p>
+            Goacha was born out of a simple idea, drinks should make you feel as
+            good as they taste.
+          </p>
+          <p>
+            In a world full of overly sweet sodas and overly serious "health
+            drinks", we wanted to create something different. Something light,
+            refreshing, and easy to come back to every day.
+          </p>
+          <p>
+            Crafted in Goa in small batches, Goacha is naturally fermented,
+            gently fizzy, and full of character. But more than what's inside the
+            bottle, Goacha is about how it fits into your life.
+          </p>
+          <p>
+            It's what you reach for on a slow afternoon. What you carry to the
+            beach. What you sip on when you want something better, without
+            overthinking it.
+          </p>
+          <p className="font-medium text-stone-100/80">
+            Brewed in Goa. Made for your everyday moments.
+          </p>
+        </motion.div>
 
         <motion.div
           className="w-[40px] h-[1px] bg-stone-100/20 my-8"

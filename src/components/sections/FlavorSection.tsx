@@ -76,7 +76,7 @@ export default function FlavorSection({ flavor, onMoreInfo, index }: Props) {
         <motion.span
           className="font-body font-extralight text-[0.75rem] tracking-[0.22em] uppercase text-stone-100 mb-2 block"
           initial={{ opacity: 0 }}
-          animate={isVisible ? { opacity: 1 } : {}}
+          animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.8, delay: 0.15 }}
         >
           {flavor.subtitle}
@@ -89,7 +89,9 @@ export default function FlavorSection({ flavor, onMoreInfo, index }: Props) {
             rel="noopener noreferrer"
             className="btn-goacha btn-goacha-solid w-full sm:w-auto justify-center"
             initial={{ opacity: 0, scale: 0.95 }}
-            animate={isVisible ? { opacity: 1, scale: 1 } : {}}
+            animate={
+              isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }
+            }
             transition={{
               type: "spring",
               stiffness: 100,
@@ -97,15 +99,17 @@ export default function FlavorSection({ flavor, onMoreInfo, index }: Props) {
               delay: 0.4,
             }}
           >
-            <MessageCircle size={13} strokeWidth={1.5} />
-            Enquire Now
+            <MessageCircle size={13} strokeWidth={1.5} className="mr-2" />
+            Order on WhatsApp
           </motion.a>
 
           <motion.button
             onClick={onMoreInfo}
             className="btn-goacha w-full sm:w-auto justify-center"
             initial={{ opacity: 0, scale: 0.95 }}
-            animate={isVisible ? { opacity: 1, scale: 1 } : {}}
+            animate={
+              isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }
+            }
             transition={{
               type: "spring",
               stiffness: 100,

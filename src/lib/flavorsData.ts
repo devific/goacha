@@ -13,107 +13,112 @@ export type Flavor = {
   accentColor: string;
   nutritional: {
     servingSize: string;
-    calories: string;
-    sugar: string;
-    protein: string;
-    probiotics: string;
-    caffeine: string;
+    per100ml: {
+      energy: string;
+      carbohydrates: string;
+      sugar: string;
+      protein: string;
+      fat: string;
+      sodium: string;
+    };
+    disclaimer: string;
   };
   details: string[];
 };
+
+const commonDetails = [
+  "Small-batch brewed in Goa",
+  "Naturally fermented with live cultures",
+  "Raw and unpasteurised",
+  "Light, balanced, and easy to drink",
+  "No added preservatives",
+  "Naturally carbonated",
+  "Made with real ingredients",
+  "Best served chilled",
+  "Refrigerate at all times",
+  "*Contains live cultures. Taste and carbonation may vary slightly over time.",
+];
 
 export const flavors: Flavor[] = [
   {
     id: "golden-hour",
     name: "Golden Hour",
     subtitle: "Apple · Chamomile",
-    tagline: "The warmth of a Goa sunset in every sip.",
+    tagline: "Smooth, mellow, and easy to sip.",
     ingredients:
-      "Organic Green Tea · Raw Cane Sugar · Live SCOBY Culture · Fresh Apple · Chamomile Flowers",
-    description:
-      "Golden Hour is our softest brew — a gentle, golden ferment of green tea layered with the sweetness of apple and the calm of chamomile. Delicate, floral, and mellow. Best sipped slowly.",
+      "Filtered H20, Kombucha Culture, Loose leaf Green Tea & Black Tea, Cane Sugar, Apple & Chamomile.",
+    description: "Made for slow evenings and easy conversations.",
     image: `${IMAGEKIT_BASE_URL}/gh.jpg?tr=h-1080,fo-auto,q-85`,
     imageMobile: `${IMAGEKIT_BASE_URL}/gh-phone.png?tr=w-1080,fo-auto,q-80`,
     overlayColor: "rgba(20,14,4,0.38)",
     accentColor: "#D4A85A",
     nutritional: {
-      servingSize: "330ml",
-      calories: "35 kcal",
-      sugar: "4g (naturally occurring)",
-      protein: "0.3g",
-      probiotics: "Live & active cultures",
-      caffeine: "Low (from green tea base)",
+      servingSize: "300 ml",
+      per100ml: {
+        energy: "21.6 kcal",
+        carbohydrates: "5.2 g",
+        sugar: "5 g",
+        protein: "0.2 g",
+        fat: "0 g",
+        sodium: "16.1 mg",
+      },
+      disclaimer:
+        "*nutrition facts at the time of packing varies over time due to live cultures",
     },
-    details: [
-      "Raw & unpasteurized — live cultures preserved",
-      "Small-batch brewed in Goa",
-      "No artificial flavours, colours, or preservatives",
-      "Naturally carbonated through fermentation",
-      "Best enjoyed chilled at 4-8°C",
-      "Shake gently before opening — natural sediment is normal",
-      "Available locally in Goa at select cafes and markets",
-    ],
+    details: commonDetails,
   },
   {
     id: "red-ruse",
     name: "Red Ruse",
     subtitle: "Hibiscus · Mint · Lime · Ginger",
-    tagline: "Bold, tart, and impossible to ignore.",
+    tagline: "Bold, refreshing, and full of character.",
     ingredients:
-      "Organic Black Tea · Raw Cane Sugar · Live SCOBY Culture · Dried Hibiscus · Fresh Mint · Lime · Ginger Root",
-    description:
-      "Red Ruse is our most vibrant brew — a deep ruby ferment with the tartness of hibiscus, a cool finish of mint, a citrus zing from lime, and a warming kick of fresh ginger. Complex and alive.",
+      "Filtered H20, Kombucha Culture, Loose leaf Green Tea & Black Tea, Cane Sugar, Ginger, Dried Hibiscus, Mint & Lime.",
+    description: "When you want something a little different.",
     image: `${IMAGEKIT_BASE_URL}/rr.jpg?tr=h-1080,fo-auto,q-85`,
     imageMobile: `${IMAGEKIT_BASE_URL}/rr-phone.png?tr=w-1080,fo-auto,q-80`,
     overlayColor: "rgba(20,4,6,0.40)",
     accentColor: "#C45A6A",
     nutritional: {
-      servingSize: "330ml",
-      calories: "30 kcal",
-      sugar: "3g (naturally occurring)",
-      protein: "0.2g",
-      probiotics: "Live & active cultures",
-      caffeine: "Moderate (from black tea base)",
+      servingSize: "300 ml",
+      per100ml: {
+        energy: "22 kcal",
+        carbohydrates: "5.4 g",
+        sugar: "5.1 g",
+        protein: "0.1 g",
+        fat: "0 g",
+        sodium: "5.74 mg",
+      },
+      disclaimer:
+        "*nutrition facts at the time of packing varies over time due to live cultures",
     },
-    details: [
-      "Raw & unpasteurized — live cultures preserved",
-      "Small-batch brewed in Goa",
-      "Hibiscus sourced locally from Goan markets",
-      "No artificial flavours, colours, or preservatives",
-      "Naturally carbonated through fermentation",
-      "Best enjoyed chilled at 4-8°C",
-      "Available locally in Goa at select cafes and markets",
-    ],
+    details: commonDetails,
   },
   {
     id: "inner-bliss",
     name: "Inner Bliss",
     subtitle: "Lemongrass · Ginger",
-    tagline: "Clean. Grounding. Quietly powerful.",
+    tagline: "Bright, zesty, and beautifully balanced.",
     ingredients:
-      "Organic Green Tea · Raw Cane Sugar · Live SCOBY Culture · Fresh Lemongrass · Ginger Root",
-    description:
-      "Inner Bliss is our most grounding brew — a clean, pale-gold ferment with the earthy brightness of lemongrass and a long, warming finish of fresh ginger. The one you reach for when you want to feel good.",
+      "Filtered H20, Kombucha Culture, Lose leaf Green Tea & Black Tea, Cane Sugar, Lemongrass & Ginger.",
+    description: "Your everyday reset.",
     image: `${IMAGEKIT_BASE_URL}/ib.jpg?tr=h-1080,fo-auto,q-85`,
     imageMobile: `${IMAGEKIT_BASE_URL}/ib-phone.png?tr=w-1080,fo-auto,q-80`,
     overlayColor: "rgba(4,14,10,0.38)",
     accentColor: "#7AAF82",
     nutritional: {
-      servingSize: "330ml",
-      calories: "28 kcal",
-      sugar: "3g (naturally occurring)",
-      protein: "0.2g",
-      probiotics: "Live & active cultures",
-      caffeine: "Low (from green tea base)",
+      servingSize: "300 ml",
+      per100ml: {
+        energy: "20.9 kcal",
+        carbohydrates: "4.9 g",
+        sugar: "4.1 g",
+        protein: "0.1 g",
+        fat: "0 g",
+        sodium: "5.8 mg",
+      },
+      disclaimer:
+        "*nutrition facts at the time of packing varies over time due to live cultures",
     },
-    details: [
-      "Raw & unpasteurized — live cultures preserved",
-      "Small-batch brewed in Goa",
-      "Lemongrass harvested fresh in Goa",
-      "No artificial flavours, colours, or preservatives",
-      "Naturally carbonated through fermentation",
-      "Best enjoyed chilled at 4-8°C",
-      "Available locally in Goa at select cafes and markets",
-    ],
+    details: commonDetails,
   },
 ];

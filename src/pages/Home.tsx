@@ -5,16 +5,26 @@ import Navbar from "@/components/layout/Navbar";
 import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
 import FlavorSection from "@/components/sections/FlavorSection";
+import BundlesSection from "@/components/sections/BundlesSection";
+import PartnerSection from "@/components/sections/PartnerSection";
 import CTAFooterSection from "@/components/sections/CTAFooterSection";
 import FlavorSheet from "@/components/FlavorSheet";
 import { flavors } from "@/lib/flavorsData";
 
-const TOTAL_SECTIONS = 6;
+const TOTAL_SECTIONS = 8;
 
 export default function Home() {
   const [sheetOpen, setSheetOpen] = useState(false);
   const { currentSection, goTo } = useFullPageScroll(TOTAL_SECTIONS, sheetOpen);
   const [activeFlavor, setActiveFlavor] = useState<number | null>(null);
+
+  const [prevSection, setPrevSection] = useState(0);
+  const [direction, setDirection] = useState(0);
+
+  if (currentSection !== prevSection) {
+    setDirection(currentSection > prevSection ? 1 : -1);
+    setPrevSection(currentSection);
+  }
 
   const sections = [
     <HeroSection key="hero" />,
@@ -46,8 +56,22 @@ export default function Home() {
         setSheetOpen(true);
       }}
     />,
+    <BundlesSection key="bundles" />,
+    <PartnerSection key="partner" />,
     <CTAFooterSection key="cta" />,
   ];
+
+  const variants = {
+    enter: (direction: number) => ({
+      y: direction > 0 ? "100%" : "-100%",
+    }),
+    center: {
+      y: 0,
+    },
+    exit: (direction: number) => ({
+      y: direction > 0 ? "-100%" : "100%",
+    }),
+  };
 
   return (
     <>
@@ -75,14 +99,16 @@ export default function Home() {
       </div>
 
       {/* ── Full-page container ── */}
-      <div className="w-full h-svh overflow-hidden relative">
-        <AnimatePresence mode="wait">
+      <div className="w-full h-svh overflow-hidden relative bg-stone-950">
+        <AnimatePresence initial={false} custom={direction}>
           <motion.div
             key={currentSection}
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -40 }}
-            transition={{ duration: 0.75, ease: [0.76, 0, 0.24, 1] }}
+            custom={direction}
+            variants={variants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
             className="w-full h-full absolute inset-0"
           >
             {sections[currentSection]}
