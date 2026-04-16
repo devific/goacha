@@ -32,6 +32,7 @@ export default function Navbar({ goTo, totalSections, currentSection }: Props) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
     >
+      <div className="h-30 w-full absolute top-0 left-0 bg-linear-to-b  from-black/50 via-black/20 to-transparent -z-10" />
       <Link to="/" onClick={handleLogoClick}>
         <img
           src={`${IMAGEKIT_BASE_URL}/logo-white.png`}
@@ -44,7 +45,7 @@ export default function Navbar({ goTo, totalSections, currentSection }: Props) {
         href={WHATSAPP_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="btn-goacha flex items-center gap-2"
+        className="btn-goacha flex items-center gap-2 "
       >
         <MessageCircle size={13} strokeWidth={1.5} />
         Enquire
