@@ -1,22 +1,25 @@
-import { motion } from "motion/react";
+import { motion, number } from "motion/react";
 import { MessageCircle } from "lucide-react";
 import { WHATSAPP_URL, IMAGEKIT_BASE_URL } from "@/lib/constants";
 
 const bundles = [
   {
     name: "Starter Pack",
-    description: "All 3 flavours - perfect to try",
-    image: `${IMAGEKIT_BASE_URL}/starter-pack.png?tr=w-600,h-600,fo-auto,q-80`,
+    number: "All 3 flavours",
+    description: "Perfect to try",
+    image: `${IMAGEKIT_BASE_URL}/bundle-3.png`,
   },
   {
     name: "Weekly Pack",
-    description: "6 bottles - your everyday refresh",
-    image: `${IMAGEKIT_BASE_URL}/weekly-pack.png?tr=w-600,h-600,fo-auto,q-80`,
+    number: "6 bottles",
+    description: "Your everyday refresh",
+    image: `${IMAGEKIT_BASE_URL}/bundle-6.png`,
   },
   {
     name: "Party Pack",
-    description: "12 bottles - made for sharing",
-    image: `${IMAGEKIT_BASE_URL}/party-pack.png?tr=w-600,h-600,fo-auto,q-80`,
+    number: "12 bottles",
+    description: "Made for sharing",
+    image: `${IMAGEKIT_BASE_URL}/bundle-12.png`,
   },
 ];
 
@@ -53,7 +56,7 @@ export default function BundlesSection() {
             >
               <div className="w-full aspect-square mb-6 bg-stone-900/50 rounded-sm overflow-hidden relative">
                 <img
-                  src={bundle.image}
+                  src={`${bundle.image}?tr=w-400,fo-auto,q-80`}
                   alt={bundle.name}
                   className="w-full h-full object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-500"
                   loading="lazy"
@@ -69,7 +72,7 @@ export default function BundlesSection() {
                 {bundle.name}
               </h3>
               <p className="font-body font-light text-sm text-stone-100/60 mb-6 flex-1">
-                {bundle.description}
+                {bundle.number} &middot; {bundle.description}
               </p>
               <a
                 href={WHATSAPP_URL}
