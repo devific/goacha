@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { MessageCircle, Check } from "lucide-react";
-import { WHATSAPP_URL } from "@/lib/constants";
+import { getWhatsAppUrl } from "@/lib/constants";
 
 export default function PartnerSection() {
   return (
@@ -102,7 +102,9 @@ export default function PartnerSection() {
         </motion.p>
 
         <motion.a
-          href={WHATSAPP_URL}
+          href={getWhatsAppUrl(
+            "Hi, I'm interested in partnering with Goacha for wholesale.",
+          )}
           target="_blank"
           rel="noopener noreferrer"
           className="btn-goacha btn-goacha-solid px-10 py-3.5 text-[0.75rem]"

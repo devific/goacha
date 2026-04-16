@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/sheet";
 import { X, MessageCircle, ArrowRight } from "lucide-react";
 import type { Flavor } from "@/lib/flavorsData";
-import { WHATSAPP_URL, IMAGEKIT_BASE_URL } from "@/lib/constants";
+import { getWhatsAppUrl, IMAGEKIT_BASE_URL } from "@/lib/constants";
 
 type Props = {
   flavor: Flavor;
@@ -150,7 +150,9 @@ export default function FlavorSheet({ flavor, open, onClose }: Props) {
             className="h-5 object-contain opacity-80"
           />
           <a
-            href={WHATSAPP_URL}
+            href={getWhatsAppUrl(
+              `Hi, I'd like to order the ${flavor.name} kombucha.`,
+            )}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-goacha w-full justify-center border-stone-950 text-stone-950 hover:bg-stone-950/5"

@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Code2Icon, CodeIcon, MessageCircle } from "lucide-react";
-import { WHATSAPP_URL, IMAGEKIT_BASE_URL } from "@/lib/constants";
+import { getWhatsAppUrl, IMAGEKIT_BASE_URL } from "@/lib/constants";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -62,7 +62,7 @@ export default function CTAFooterSection() {
           </motion.h2>
 
           <motion.a
-            href={WHATSAPP_URL}
+            href={getWhatsAppUrl("Hi, I'd like to order some Goacha Kombucha.")}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-goacha btn-goacha-solid mt-9 px-10 py-3.5 text-[0.75rem]"

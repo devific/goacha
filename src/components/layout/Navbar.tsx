@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { MessageCircle } from "lucide-react";
-import { WHATSAPP_URL, IMAGEKIT_BASE_URL } from "@/lib/constants";
+import { getWhatsAppUrl, IMAGEKIT_BASE_URL } from "@/lib/constants";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 interface Props {
@@ -42,7 +42,7 @@ export default function Navbar({ goTo, totalSections, currentSection }: Props) {
       </Link>
 
       <a
-        href={WHATSAPP_URL}
+        href={getWhatsAppUrl("Hi, I'd like to enquire about Goacha Kombucha.")}
         target="_blank"
         rel="noopener noreferrer"
         className="btn-goacha flex items-center gap-2 "

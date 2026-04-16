@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "motion/react";
 import { MessageCircle, ChevronLeft, ChevronRight } from "lucide-react";
-import { WHATSAPP_URL, IMAGEKIT_BASE_URL } from "@/lib/constants";
+import { getWhatsAppUrl, IMAGEKIT_BASE_URL } from "@/lib/constants";
 import { useState } from "react";
 
 const bundles = [
@@ -105,7 +105,9 @@ export default function BundlesSection() {
                 {bundle.number} &middot; {bundle.description}
               </p>
               <a
-                href={WHATSAPP_URL}
+                href={getWhatsAppUrl(
+                  `Hi, I'd like to order the ${bundle.name} bundle.`,
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-goacha w-full justify-center text-xs py-3"
@@ -160,7 +162,9 @@ export default function BundlesSection() {
                   {bundles[currentIndex].description}
                 </p>
                 <a
-                  href={WHATSAPP_URL}
+                  href={getWhatsAppUrl(
+                    `Hi, I'd like to order the ${bundles[currentIndex].name} bundle.`,
+                  )}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-goacha w-full justify-center text-xs py-2.5"

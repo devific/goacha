@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { MessageCircle, ArrowDown } from "lucide-react";
-import { WHATSAPP_URL, IMAGEKIT_BASE_URL } from "@/lib/constants";
+import { getWhatsAppUrl, IMAGEKIT_BASE_URL } from "@/lib/constants";
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -112,7 +112,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 1.5, ease: "easeOut" }}
         >
           <a
-            href={WHATSAPP_URL}
+            href={getWhatsAppUrl("Hi, I'd like to order some Goacha Kombucha.")}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-goacha btn-goacha-solid w-full sm:w-auto justify-center"

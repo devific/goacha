@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { MessageCircle } from "lucide-react";
 import type { Flavor } from "@/lib/flavorsData";
-import { WHATSAPP_URL } from "@/lib/constants";
+import { getWhatsAppUrl } from "@/lib/constants";
 import { useEffect, useState } from "react";
 
 type Props = {
@@ -79,7 +79,9 @@ export default function FlavorSection({ flavor, onMoreInfo, index }: Props) {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-2 w-full">
           <motion.a
-            href={WHATSAPP_URL}
+            href={getWhatsAppUrl(
+              `Hi, I'd like to order the ${flavor.name} kombucha.`,
+            )}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-goacha btn-goacha-solid w-full sm:w-auto justify-center"
