@@ -5,7 +5,11 @@ import { useEffect, useState } from "react";
 import { MessageCircle, ArrowDown } from "lucide-react";
 import { getWhatsAppUrl, IMAGEKIT_BASE_URL } from "@/lib/constants";
 
-export default function HeroSection() {
+interface Props {
+  goTo: (index: number) => void;
+}
+
+export default function HeroSection({ goTo }: Props) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -123,9 +127,7 @@ export default function HeroSection() {
 
           <button
             onClick={() => {
-              window.dispatchEvent(
-                new KeyboardEvent("keydown", { key: "ArrowDown" }),
-              );
+              goTo(2);
             }}
             className="btn-goacha w-full sm:w-auto justify-center"
           >

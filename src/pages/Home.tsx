@@ -27,7 +27,7 @@ export default function Home() {
   }
 
   const sections = [
-    <HeroSection key="hero" />,
+    <HeroSection key="hero" goTo={goTo} />,
     <AboutSection key="about" onScrollHint={() => goTo(2)} />,
     <FlavorSection
       key="gh"
