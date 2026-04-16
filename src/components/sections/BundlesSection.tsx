@@ -143,7 +143,7 @@ export default function BundlesSection() {
                   <img
                     src={`${bundles[currentIndex].image}?tr=w-400,fo-auto,q-80`}
                     alt={bundles[currentIndex].name}
-                    className="w-full h-full object-cover opacity-80 grayscale transition-all duration-500"
+                    className="w-full h-full object-cover opacity-80  md:grayscale group-hover:grayscale-0  transition-all duration-500"
                     loading="lazy"
                     referrerPolicy="no-referrer"
                     onError={(e) => {

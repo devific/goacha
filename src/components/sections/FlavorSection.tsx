@@ -33,12 +33,7 @@ export default function FlavorSection({ flavor, onMoreInfo, index }: Props) {
         />
       </picture>
 
-      <div
-        className="absolute inset-0"
-        style={{ backgroundColor: flavor.overlayColor }}
-      />
-      <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-stone-950 via-stone-950/50 to-transparent" />
-
+      <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-stone-950 via-stone-950/10 to-transparent" />
       <div className="relative z-10 max-w-md w-full px-6 text-center flex flex-col items-center">
         <span className="font-body font-extralight text-[0.5rem] tracking-[0.3em] uppercase text-stone-100/80 mb-2">
           0{index + 1}

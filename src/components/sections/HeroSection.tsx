@@ -56,8 +56,7 @@ export default function HeroSection() {
         />
       </picture>
 
-      <div className="absolute inset-0 bg-[rgba(8,8,6,0.2)]" />
-      <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-[#0A0A08] via-[#0A0A08]/40 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-[#0A0A08] via-[#0A0A08]/10 to-transparent" />
 
       <div className="relative z-10 max-w-[600px] w-full px-6 text-center flex flex-col items-center pb-8">
         {/* Top label */}
