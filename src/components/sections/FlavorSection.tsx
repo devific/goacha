@@ -11,12 +11,6 @@ type Props = {
 };
 
 export default function FlavorSection({ flavor, onMoreInfo, index }: Props) {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
   return (
     <div
       className="relative w-full h-full min-h-[100svh] flex flex-col items-center justify-end pb-10 overflow-hidden mobile-section bg-stone-950"
@@ -42,7 +36,8 @@ export default function FlavorSection({ flavor, onMoreInfo, index }: Props) {
         <motion.h2
           className="font-display text-[clamp(2rem,4.5vw,3.5rem)] text-stone-100 leading-[1.0] mb-4 flex justify-center flex-wrap"
           initial="hidden"
-          animate={isVisible ? "visible" : "hidden"}
+          whileInView="visible"
+          viewport={{ once: true, margin: "-10%" }}
           variants={{
             visible: {
               transition: { staggerChildren: 0.1, delayChildren: 0.1 },
@@ -71,7 +66,8 @@ export default function FlavorSection({ flavor, onMoreInfo, index }: Props) {
         <motion.span
           className="font-body font-extralight text-[0.75rem] tracking-[0.22em] uppercase text-stone-100 mb-2 block"
           initial={{ opacity: 0 }}
-          animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-10%" }}
           transition={{ duration: 0.8, delay: 0.15 }}
         >
           {flavor.subtitle}
@@ -86,9 +82,8 @@ export default function FlavorSection({ flavor, onMoreInfo, index }: Props) {
             rel="noopener noreferrer"
             className="btn-goacha btn-goacha-solid w-full sm:w-auto justify-center"
             initial={{ opacity: 0, scale: 0.95 }}
-            animate={
-              isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }
-            }
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-10%" }}
             transition={{
               type: "spring",
               stiffness: 100,
@@ -104,9 +99,8 @@ export default function FlavorSection({ flavor, onMoreInfo, index }: Props) {
             onClick={onMoreInfo}
             className="btn-goacha w-full sm:w-auto justify-center"
             initial={{ opacity: 0, scale: 0.95 }}
-            animate={
-              isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }
-            }
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-10%" }}
             transition={{
               type: "spring",
               stiffness: 100,

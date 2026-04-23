@@ -87,7 +87,7 @@ export default function Navbar() {
             )}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-goacha flex items-center gap-2"
+            className="btn-goacha flex items-center gap-2 max-md:p-2!"
           >
             <MessageCircle size={13} strokeWidth={1.5} />
             <span className="hidden sm:inline">Enquire</span>
@@ -98,7 +98,7 @@ export default function Navbar() {
             onClick={() => setIsMenuOpen(true)}
             aria-label="Open Menu"
           >
-            <Menu size={20} />
+            <Menu size={13} strokeWidth={1.5} />
           </button>
         </div>
       </motion.nav>
@@ -113,7 +113,7 @@ export default function Navbar() {
             className="fixed inset-0 z-[60] bg-stone-950 flex flex-col pt-24 px-6 pb-8"
           >
             <button
-              className="absolute top-6 right-6 text-gc-cream p-2"
+              className="absolute top-6 right-6 text-gc-cream p-2 cursor-pointer"
               onClick={() => setIsMenuOpen(false)}
               aria-label="Close Menu"
             >

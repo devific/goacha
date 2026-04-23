@@ -4,12 +4,6 @@ import { getWhatsAppUrl } from "@/lib/constants";
 import { useEffect, useState } from "react";
 
 export default function CTAFooterSection() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
   return (
     <div
       className="relative w-full py-16 bg-[#F0F6F8] flex flex-col overflow-hidden mobile-section"
@@ -24,7 +18,8 @@ export default function CTAFooterSection() {
           <motion.div
             className="flex items-center gap-4 mb-6"
             initial={{ opacity: 0, y: 10 }}
-            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-10%" }}
             transition={{ duration: 0.8 }}
           >
             <div className="w-[30px] h-[1px] bg-stone-950/20" />
@@ -37,7 +32,8 @@ export default function CTAFooterSection() {
           <motion.h2
             className="font-display text-[clamp(2rem,4.5vw,3.5rem)] text-stone-950 leading-[1.0] mb-4 flex justify-center flex-wrap"
             initial="hidden"
-            animate={isVisible ? "visible" : "hidden"}
+            whileInView="visible"
+            viewport={{ once: true, margin: "-10%" }}
             variants={{
               visible: {
                 transition: { staggerChildren: 0.1, delayChildren: 0.1 },
@@ -69,9 +65,8 @@ export default function CTAFooterSection() {
             rel="noopener noreferrer"
             className="btn-goacha !bg-stone-950 !text-[#F0F6F8] !border-stone-950 hover:!bg-stone-950/80 mt-9 px-10 py-3.5 text-[0.75rem]"
             initial={{ opacity: 0, scale: 0.96 }}
-            animate={
-              isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.96 }
-            }
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-10%" }}
             transition={{
               type: "spring",
               stiffness: 100,
