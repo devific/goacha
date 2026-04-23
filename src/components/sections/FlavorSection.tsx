@@ -19,7 +19,7 @@ export default function FlavorSection({ flavor, onMoreInfo, index }: Props) {
 
   return (
     <div
-      className="relative w-full h-full flex flex-col items-center justify-end pb-10 overflow-hidden mobile-section"
+      className="relative w-full h-full min-h-[100svh] flex flex-col items-center justify-end pb-10 overflow-hidden mobile-section bg-stone-950"
       data-index={index + 2}
     >
       <picture>

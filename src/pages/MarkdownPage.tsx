@@ -1,44 +1,85 @@
-import { motion } from "motion/react";
-import Markdown from "react-markdown";
-import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
-import { useEffect } from "react";
+import { useState } from "react";
+import Layout from "@/components/layout/Layout";
+import HeroSection from "@/components/sections/HeroSection";
+import AboutSection from "@/components/sections/AboutSection";
+import StatsSection from "@/components/sections/StatsSection";
+import FlavorSection from "@/components/sections/FlavorSection";
+import BundlesSection from "@/components/sections/BundlesSection";
+import PartnerSection from "@/components/sections/PartnerSection";
+import CTAFooterSection from "@/components/sections/CTAFooterSection";
+import FlavorSheet from "@/components/FlavorSheet";
+import { flavors } from "@/lib/flavorsData";
 
-type Props = {
-  title: string;
-  content: string;
-};
+import { SEO } from "@/components/SEO";
 
-export default function MarkdownPage({ title, content }: Props) {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+export default function Home() {
+  const [sheetOpen, setSheetOpen] = useState(false);
+  const [activeFlavor, setActiveFlavor] = useState<number | null>(null);
+
+  const openFlavorInfo = (index: number) => {
+    setActiveFlavor(index);
+    setSheetOpen(true);
+  };
 
   return (
-    <div className="min-h-svh bg-stone-950 text-stone-100 overflow-y-auto w-full">
-      <div className="max-w-3xl mx-auto px-6 py-24">
-        <Link
-          to="/"
-          className="inline-flex items-center gap-2 text-stone-100/60 hover:text-stone-100 transition-colors mb-12 font-body text-sm uppercase tracking-widest"
-        >
-          <ArrowLeft size={16} />
-          Back to Home
-        </Link>
+    <Layout>
+      <SEO />
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="font-display text-4xl md:text-5xl font-light tracking-wide uppercase mb-12 text-stone-100">
-            {title}
-          </h1>
+      <section id="hero" className="w-full relative">
+        <HeroSection />
+      </section>
+      <section id="about" className="w-full relative">
+        <AboutSection
+          onScrollHint={() => {
+            const el = document.getElementById("flavors");
+            el?.scrollIntoView({ behavior: "smooth" });
+          }}
+        />
+      </section>
+      <section id="stats" className="w-full relative">
+        <StatsSection />
+      </section>
+      <section id="flavors" className="w-full relative">
+        <div className="w-full relative">
+          <FlavorSection
+            flavor={flavors[0]}
+            index={0}
+            onMoreInfo={() => openFlavorInfo(0)}
+          />
+        </div>
+        <div className="w-full relative">
+          <FlavorSection
+            flavor={flavors[1]}
+            index={1}
+            onMoreInfo={() => openFlavorInfo(1)}
+          />
+        </div>
+        <div className="w-full relative">
+          <FlavorSection
+            flavor={flavors[2]}
+            index={2}
+            onMoreInfo={() => openFlavorInfo(2)}
+          />
+        </div>
+      </section>
+      <section id="bundles" className="w-full relative">
+        <BundlesSection />
+      </section>
+      <section id="stock" className="w-full relative">
+        <PartnerSection />
+      </section>
+      <section className="w-full relative">
+        <CTAFooterSection />
+      </section>
 
-          <div className="prose prose-invert prose-stone max-w-none font-body font-light text-stone-100/80 prose-headings:font-display prose-headings:font-light prose-headings:uppercase prose-headings:tracking-wide prose-a:text-stone-100 prose-a:underline-offset-4 hover:prose-a:text-white prose-strong:font-medium prose-strong:text-stone-100">
-            <Markdown>{content}</Markdown>
-          </div>
-        </motion.div>
-      </div>
-    </div>
+      {/* ── Flavor Sheet ── */}
+      {activeFlavor !== null && (
+        <FlavorSheet
+          flavor={flavors[activeFlavor]}
+          open={sheetOpen}
+          onClose={() => setSheetOpen(false)}
+        />
+      )}
+    </Layout>
   );
 }

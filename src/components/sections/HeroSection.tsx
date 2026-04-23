@@ -1,15 +1,11 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, Variants } from "motion/react";
 import { useEffect, useState } from "react";
 import { MessageCircle, ArrowDown } from "lucide-react";
 import { getWhatsAppUrl, IMAGEKIT_BASE_URL } from "@/lib/constants";
 
-interface Props {
-  goTo: (index: number) => void;
-}
-
-export default function HeroSection({ goTo }: Props) {
+export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -17,7 +13,7 @@ export default function HeroSection({ goTo }: Props) {
   }, []);
 
   // Parent container for stagger animation
-  const container = {
+  const container: Variants = {
     hidden: {},
     visible: {
       transition: {
@@ -28,7 +24,7 @@ export default function HeroSection({ goTo }: Props) {
   };
 
   // Each word animation
-  const child = {
+  const child: Variants = {
     hidden: { opacity: 0, y: 30, filter: "blur(8px)" },
     visible: {
       opacity: 1,
@@ -43,7 +39,7 @@ export default function HeroSection({ goTo }: Props) {
 
   return (
     <div
-      className="relative w-full h-full flex flex-col items-center justify-end pb-12 overflow-hidden mobile-section"
+      className="relative w-full h-[100svh] flex flex-col items-center justify-end pb-12 overflow-hidden mobile-section"
       data-index={0}
     >
       <picture>
@@ -127,7 +123,8 @@ export default function HeroSection({ goTo }: Props) {
 
           <button
             onClick={() => {
-              goTo(2);
+              const el = document.getElementById("flavors");
+              el?.scrollIntoView({ behavior: "smooth" });
             }}
             className="btn-goacha w-full sm:w-auto justify-center"
           >

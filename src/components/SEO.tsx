@@ -1,3 +1,4 @@
+import React from "react";
 import { Helmet } from "react-helmet-async";
 import { IMAGEKIT_BASE_URL } from "@/lib/constants";
 
@@ -12,7 +13,7 @@ interface SEOProps {
 export function SEO({
   title = "Goacha Kombucha | Not Soda. Not Boring.",
   description = "Handcrafted Kombucha made in Goa. Naturally fermented, gently fizzy, and full of character. Three flavours. Three moods. Taste the culture.",
-  image = `${IMAGEKIT_BASE_URL}/meta.jpg`,
+  image = `${IMAGEKIT_BASE_URL}/goacha-hero-meta.jpg`,
   type = "website",
   url = "https://goacha.in",
 }: SEOProps) {
