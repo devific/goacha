@@ -21,7 +21,7 @@ export default function StatsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 + i * 0.1 }}
           >
-            <span className="font-display italic font-medium text-4xl sm:text-5xl lg:text-6xl text-[#FFF8F0]">
+            <span className="font-display  font-medium text-4xl sm:text-5xl lg:text-6xl text-[#FFF8F0]">
               {stat.num}
             </span>
             <span className="font-body font-light text-[0.6rem] sm:text-[0.65rem] md:text-xs tracking-[0.15em] sm:tracking-[0.2em] md:tracking-[0.3em] uppercase text-[#FFF8F0]/70">

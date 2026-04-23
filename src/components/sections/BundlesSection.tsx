@@ -105,7 +105,7 @@ export default function BundlesSection() {
                   }}
                 />
               </div>
-              <h3 className="font-display italic font-medium text-2xl text-stone-950 mb-2">
+              <h3 className="font-display  font-medium text-2xl text-stone-950 mb-2">
                 {bundle.name}
               </h3>
               <div className="flex flex-col items-center mb-6 flex-1">
@@ -166,7 +166,7 @@ export default function BundlesSection() {
                     }}
                   />
                 </div>
-                <h3 className="font-display italic font-medium text-xl text-stone-950 mb-1">
+                <h3 className="font-display  font-medium text-xl text-stone-950 mb-1">
                   {bundles[currentIndex].name}
                 </h3>
                 <div className="flex flex-col items-center mb-4 flex-1">

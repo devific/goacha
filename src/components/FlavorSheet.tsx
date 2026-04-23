@@ -29,7 +29,7 @@ export default function FlavorSheet({ flavor, open, onClose }: Props) {
         <div className="flex-1 overflow-y-auto">
           {/* TOP SECTION */}
           <div className="pt-16 px-8 pb-6 border-b border-stone-100/8">
-            <h2 className="font-display font-light text-[2.5rem] tracking-[0.1em] uppercase text-stone-100 leading-none mb-2">
+            <h2 className="font-display text-[2.5rem] text-stone-100 leading-none mb-2">
               {flavor.name}
             </h2>
             <span className="font-body font-extralight text-[0.6875rem] tracking-[0.2em] uppercase text-stone-100/55">
@@ -110,7 +110,7 @@ export default function FlavorSheet({ flavor, open, onClose }: Props) {
                   )}
                 </div>
                 <div className="py-2.5">
-                  <span className="font-body font-light text-[0.65rem] text-stone-100/40 italic">
+                  <span className="font-body font-light text-[0.65rem] text-stone-100/40 ">
                     {flavor.nutritional.disclaimer}
                   </span>
                 </div>

@@ -31,7 +31,7 @@ export default function AboutSection({ onScrollHint }: Props) {
           </motion.div>
 
           <motion.h2
-            className="font-display italic font-light text-[clamp(2.5rem,5vw,4rem)] text-stone-950 leading-[1.05] mb-6 md:mb-8"
+            className="font-display text-[clamp(2.5rem,5vw,4rem)] text-stone-950 leading-[1.05] mb-6 md:mb-8"
             initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             viewport={{ once: true }}
@@ -70,7 +70,7 @@ export default function AboutSection({ onScrollHint }: Props) {
               flex flex-col gap-4 md:gap-0 md:space-y-6 text-left"
           >
             <div className="bg-[#FFF8F0]/60 md:bg-transparent border border-stone-950/5 md:border-none p-6 md:p-0 rounded-2xl md:rounded-none backdrop-blur-sm md:backdrop-blur-none">
-              <span className="font-display italic text-stone-950/20 text-2xl mb-2 block md:hidden">
+              <span className="font-display  text-stone-950/20 text-2xl mb-2 block md:hidden">
                 01
               </span>
               <p>
@@ -82,7 +82,7 @@ export default function AboutSection({ onScrollHint }: Props) {
             </div>
 
             <div className="bg-[#FFF8F0]/60 md:bg-transparent border border-stone-950/5 md:border-none p-6 md:p-0 rounded-2xl md:rounded-none backdrop-blur-sm md:backdrop-blur-none">
-              <span className="font-display italic text-stone-950/20 text-2xl mb-2 block md:hidden">
+              <span className="font-display  text-stone-950/20 text-2xl mb-2 block md:hidden">
                 02
               </span>
               <p>
@@ -94,10 +94,10 @@ export default function AboutSection({ onScrollHint }: Props) {
             </div>
 
             <div className="bg-[#FFF8F0]/60 md:bg-transparent border border-stone-950/5 md:border-none p-6 md:p-0 rounded-2xl md:rounded-none backdrop-blur-sm md:backdrop-blur-none">
-              <span className="font-display italic text-stone-950/20 text-2xl mb-2 block md:hidden">
+              <span className="font-display  text-stone-950/20 text-2xl mb-2 block md:hidden">
                 03
               </span>
-              <p className="italic font-medium text-stone-950/90 pt-0 md:pt-4">
+              <p className=" font-medium text-stone-950/90 pt-0 md:pt-4">
                 It's what you reach for on a slow afternoon. What you carry to
                 the beach. What you sip on when you want something better,
                 without overthinking it.

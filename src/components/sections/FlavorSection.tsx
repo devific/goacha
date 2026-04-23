@@ -40,7 +40,7 @@ export default function FlavorSection({ flavor, onMoreInfo, index }: Props) {
         </span>
 
         <motion.h2
-          className="font-display italic font-light text-[clamp(2rem,4.5vw,3.5rem)] text-stone-100 leading-[1.0] mb-4 flex justify-center flex-wrap"
+          className="font-display text-[clamp(2rem,4.5vw,3.5rem)] text-stone-100 leading-[1.0] mb-4 flex justify-center flex-wrap"
           initial="hidden"
           animate={isVisible ? "visible" : "hidden"}
           variants={{

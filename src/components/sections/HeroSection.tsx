@@ -78,7 +78,7 @@ export default function HeroSection() {
           variants={container}
           initial="hidden"
           animate={isVisible ? "visible" : "hidden"}
-          className="font-display italic text-[clamp(1.75rem,4vw,3rem)] text-[#F2EDE4] mb-2 flex justify-center"
+          className="font-display  text-[clamp(1.75rem,4vw,3rem)] text-[#F2EDE4] mb-2 flex justify-center"
         >
           {"Not Soda. Not Boring.".split(" ").map((word, i) => (
             <motion.span

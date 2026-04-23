@@ -30,7 +30,7 @@ export default function PartnerSection() {
           </motion.div>
 
           <motion.h2
-            className="font-display italic font-light text-[clamp(2.5rem,5vw,4rem)] text-stone-950 leading-[1.05] mb-6 md:mb-8"
+            className="font-display text-[clamp(2.5rem,5vw,4rem)] text-stone-950 leading-[1.05] mb-6 md:mb-8"
             initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             viewport={{ once: true }}
@@ -69,7 +69,7 @@ export default function PartnerSection() {
               flex flex-col gap-4 md:gap-0 md:space-y-6 text-left"
           >
             <div className="bg-[#F8F5FA]/60 md:bg-transparent border border-stone-950/5 md:border-none p-6 md:p-0 rounded-2xl md:rounded-none backdrop-blur-sm md:backdrop-blur-none">
-              <span className="font-display italic text-stone-950/20 text-2xl mb-2 block md:hidden">
+              <span className="font-display  text-stone-950/20 text-2xl mb-2 block md:hidden">
                 01
               </span>
               <p>
@@ -80,7 +80,7 @@ export default function PartnerSection() {
             </div>
 
             <div className="bg-[#F8F5FA]/60 md:bg-transparent border border-stone-950/5 md:border-none p-6 md:p-0 rounded-2xl md:rounded-none backdrop-blur-sm md:backdrop-blur-none">
-              <span className="font-display italic text-stone-950/20 text-2xl mb-4 block md:hidden">
+              <span className="font-display  text-stone-950/20 text-2xl mb-4 block md:hidden">
                 02
               </span>
 
@@ -104,7 +104,7 @@ export default function PartnerSection() {
             </div>
 
             <div className="bg-[#F8F5FA]/60 md:bg-transparent border border-stone-950/5 md:border-none p-6 md:p-0 rounded-2xl md:rounded-none backdrop-blur-sm md:backdrop-blur-none flex flex-col md:pt-4">
-              <p className="font-body font-medium text-stone-950/90 mb-6 italic">
+              <p className="font-body font-medium text-stone-950/90 mb-6 ">
                 Now available in 45+ outlets and growing. Reach out for
                 wholesale pricing.
               </p>
