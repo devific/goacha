@@ -12,14 +12,14 @@ const bundles = [
     image: `${IMAGEKIT_BASE_URL}/bundle-3.png`,
   },
   {
-    name: "Party Pack",
+    name: "Family Pack",
     number: "6 bottles",
     description: "Your everyday refresh",
     price: "₹1200",
     image: `${IMAGEKIT_BASE_URL}/bundle-6.png`,
   },
   {
-    name: "Family Pack",
+    name: "Party Pack",
     number: "12 bottles",
     description: "Made for sharing",
     price: "₹2400",
