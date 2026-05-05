@@ -70,9 +70,6 @@ export default function AboutSection({ onScrollHint }: Props) {
               flex flex-col gap-4 md:gap-0 md:space-y-6 text-left"
           >
             <div className="bg-[#FFF8F0]/60 md:bg-transparent border border-stone-950/5 md:border-none p-6 md:p-0 rounded-2xl md:rounded-none backdrop-blur-sm md:backdrop-blur-none">
-              <span className="font-display  text-stone-950/20 text-2xl mb-2 block md:hidden">
-                01
-              </span>
               <p>
                 In a world full of overly sweet sodas and deeply serious "health
                 drinks", we wanted to create something entirely different.
@@ -82,9 +79,6 @@ export default function AboutSection({ onScrollHint }: Props) {
             </div>
 
             <div className="bg-[#FFF8F0]/60 md:bg-transparent border border-stone-950/5 md:border-none p-6 md:p-0 rounded-2xl md:rounded-none backdrop-blur-sm md:backdrop-blur-none">
-              <span className="font-display  text-stone-950/20 text-2xl mb-2 block md:hidden">
-                02
-              </span>
               <p>
                 Crafted right here in Goa in small batches, Goacha is naturally
                 fermented, gently fizzy, and brimming with character. But more
@@ -94,9 +88,6 @@ export default function AboutSection({ onScrollHint }: Props) {
             </div>
 
             <div className="bg-[#FFF8F0]/60 md:bg-transparent border border-stone-950/5 md:border-none p-6 md:p-0 rounded-2xl md:rounded-none backdrop-blur-sm md:backdrop-blur-none">
-              <span className="font-display  text-stone-950/20 text-2xl mb-2 block md:hidden">
-                03
-              </span>
               <p className=" font-medium text-stone-950/90 pt-0 md:pt-4">
                 It's what you reach for on a slow afternoon. What you carry to
                 the beach. What you sip on when you want something better,
