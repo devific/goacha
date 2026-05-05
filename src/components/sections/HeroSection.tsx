@@ -61,7 +61,7 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-[600px] w-full px-6 text-center flex flex-col items-center pb-8">
         {/* Top label */}
         <motion.span
-          className="font-body font-extralight text-[0.625rem] tracking-[0.25em] uppercase text-[#F2EDE4]/90"
+          className="font-body text-[0.625rem] tracking-[0.25em] uppercase text-white"
           initial={{ opacity: 0, y: 10, filter: "blur(4px)" }}
           animate={
             isVisible
