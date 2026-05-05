@@ -3,6 +3,7 @@ import { MessageCircle, Menu, X } from "lucide-react";
 import { getWhatsAppUrl, IMAGEKIT_BASE_URL } from "@/lib/constants";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { SiInstagram } from "@icons-pack/react-simple-icons";
 
 export default function Navbar() {
   const location = useLocation();
@@ -91,6 +92,15 @@ export default function Navbar() {
           >
             <MessageCircle size={13} strokeWidth={1.5} />
             <span className="hidden sm:inline">Enquire</span>
+          </a>
+
+          <a
+            href="https://www.instagram.com/goacha_"
+            target="_blank"
+            rel="noopener noreferrer"
+            className=" btn-goacha !p-2 flex items-center justify-center text-gc-cream"
+          >
+            <SiInstagram className="size-3 md:size-5 " />
           </a>
 
           <button

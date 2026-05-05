@@ -2,7 +2,6 @@ import { motion } from "motion/react";
 import { MessageCircle } from "lucide-react";
 import type { Flavor } from "@/lib/flavorsData";
 import { getWhatsAppUrl } from "@/lib/constants";
-import { useEffect, useState } from "react";
 
 type Props = {
   flavor: Flavor;
