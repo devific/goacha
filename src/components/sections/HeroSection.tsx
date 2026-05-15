@@ -45,10 +45,10 @@ export default function HeroSection() {
       <picture>
         <source
           media="(max-width: 768px)"
-          srcSet={`${IMAGEKIT_BASE_URL}/all-phone-new.jpg?tr=w-1080,h-1920,fo-auto,q-85`}
+          srcSet={`${IMAGEKIT_BASE_URL}/phone-hero.jpg?tr=w-1080,h-1920,fo-auto,q-85`}
         />
         <img
-          src={`${IMAGEKIT_BASE_URL}/all-desktop-new.jpg?tr=w-1920,h-1080,fo-auto,q-85`}
+          src={`${IMAGEKIT_BASE_URL}/original-hero.jpg?tr=w-1920,h-1080,fo-auto,q-85`}
           alt="Goacha Kombucha"
           className="absolute inset-0 w-full h-full object-cover"
           loading="eager"
