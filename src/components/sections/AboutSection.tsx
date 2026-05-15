@@ -7,7 +7,7 @@ type Props = {
 export default function AboutSection({ onScrollHint }: Props) {
   return (
     <div
-      className="relative w-full min-h-[100svh] py-32 bg-[#F8F5FA] flex items-center justify-center overflow-hidden mobile-section"
+      className="relative w-full min-h-[100svh] py-32 bg-medium-turquoise flex items-center justify-center overflow-hidden mobile-section"
       data-index={1}
     >
       {/* Decorative Blobs */}

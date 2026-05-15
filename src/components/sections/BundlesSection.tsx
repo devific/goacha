@@ -58,7 +58,7 @@ export default function BundlesSection() {
 
   return (
     <div
-      className="relative w-full min-h-[100svh] py-24 bg-[#F2F7F2] flex flex-col items-center justify-center overflow-hidden mobile-section px-6"
+      className="relative w-full min-h-[100svh] py-24 bg-mountain-meadow flex flex-col items-center justify-center overflow-hidden mobile-section px-6"
       data-index={5}
     >
       {/* Decorative Blobs */}
@@ -85,7 +85,7 @@ export default function BundlesSection() {
           {bundles.map((bundle, i) => (
             <motion.div
               key={bundle.name}
-              className="flex flex-col items-center text-center bg-stone-950/5 border border-stone-950/10 p-8 rounded-sm group"
+              className="flex flex-col items-center text-center bg-stone-950/20 border border-stone-950/10 p-8 rounded-sm group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

@@ -5,7 +5,7 @@ import { getWhatsAppUrl } from "@/lib/constants";
 export default function PartnerSection() {
   return (
     <div
-      className="relative w-full py-32 bg-[#F8F5FA] flex items-center justify-center overflow-hidden mobile-section"
+      className="relative w-full py-32 bg-medium-turquoise flex items-center justify-center overflow-hidden mobile-section"
       data-index={6}
     >
       {/* Decorative Blobs */}

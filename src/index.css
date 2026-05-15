@@ -34,6 +34,54 @@
   --font-body: "Jost", system-ui, sans-serif;
 }
 
+@theme {
+  --color-trumpet-teal: #5a7d7a;
+  --color-turquoise: #40e0d0;
+  --color-viridian: #40826d;
+
+  --color-steel-teal: #5f8a8b;
+  --color-teal-bayou: #57a1a0;
+  --color-teal-blue: #367588;
+  --color-teal-green: #00827f;
+  --color-tropical-teal: #008794;
+
+  --color-pale-teal: #82cbb2;
+  --color-persian-green: #00a693;
+  --color-pine-green: #01796f;
+  --color-rich-black: #004040;
+  --color-skobeloff: #007474;
+
+  --color-medium-turquoise: #48d1cc;
+  --color-metallic-seaweed: #0a7e8c;
+  --color-midnight-green: #004953;
+  --color-mountain-meadow: #30ba8f;
+  --color-navy-teal: #20576e;
+
+  --color-hooker-green: #49796b;
+  --color-jungle-green: #29ab87;
+  --color-largo-teal: #23777b;
+  --color-light-sea-green: #20b2aa;
+  --color-marine-teal: #008384;
+
+  --color-dull-teal: #5e9e8f;
+  --color-dusty-teal: #4c9085;
+  --color-egyptian-teal: #008c8d;
+  --color-empress-teal: #10605a;
+  --color-gray-teal: #5e9b8a;
+
+  --color-common-teal: #009193;
+  --color-crystal-teal: #00637c;
+  --color-dark-teal: #045d5d;
+  --color-deep-jungle-green: #004b49;
+  --color-deep-teal: #005f5f;
+
+  --color-teal: #008080;
+  --color-aquamarine: #7fffd4;
+  --color-bright-teal: #01f9c6;
+  --color-cadet-blue: #5f9ea0;
+  --color-caribbean-green: #00cc99;
+}
+
 @layer base {
   *,
   *::before,
