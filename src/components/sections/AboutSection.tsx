@@ -66,8 +66,8 @@ export default function AboutSection({ onScrollHint }: Props) {
             Mobile: vertically stacked cards
           */}
           <div
-            className="pl-0 md:pl-12 md:border-l border-stone-950/10 font-body font-light text-[0.9375rem] leading-[1.8] text-stone-950/70
-              flex flex-col gap-4 md:gap-0 md:space-y-6 text-left"
+            className="pl-0 md:pl-12 md:border-l border-stone-950/10 font-body text-[0.9375rem] leading-[1.8] 
+              flex flex-col gap-4 md:gap-0 md:space-y-6 text-left font-medium text-stone-950/90"
           >
             <p>
               In a world full of overly sweet sodas and deeply serious "health
@@ -83,7 +83,7 @@ export default function AboutSection({ onScrollHint }: Props) {
               life.
             </p>
 
-            <p className=" font-medium text-stone-950/90 pt-0 md:pt-4">
+            <p className=" pt-0 md:pt-4">
               It's what you reach for on a slow afternoon. What you carry to the
               beach. What you sip on when you want something better, without
               overthinking it.

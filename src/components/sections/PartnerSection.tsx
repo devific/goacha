@@ -65,8 +65,8 @@ export default function PartnerSection() {
             Mobile: vertically stacked cards
           */}
           <div
-            className="pl-0 md:pl-12 md:border-l border-stone-950/10 font-body font-light text-[0.9375rem] leading-[1.8] text-stone-950/70
-              flex flex-col gap-4 md:gap-0 space-y-6 text-left"
+            className="pl-0 md:pl-12 md:border-l border-stone-950/10  text-[0.9375rem] leading-[1.8] 
+              flex flex-col gap-4 md:gap-0 space-y-6 text-left font-body font-medium text-stone-950/90"
           >
             <p>
               If you're looking to offer something refreshing, easy to drink,
@@ -85,15 +85,13 @@ export default function PartnerSection() {
                     size={16}
                     className="text-stone-950/80 mt-1 shrink-0"
                   />
-                  <span className="font-body font-light text-[0.9375rem] text-stone-950/80">
-                    {point}
-                  </span>
+                  <span className="text-[0.9375rem] ">{point}</span>
                 </div>
               ))}
             </div>
 
             <div className="flex flex-col">
-              <p className="font-body font-medium text-stone-950/90 mb-6 ">
+              <p className=" mb-6 ">
                 Now available in 45+ outlets and growing. Reach out for
                 wholesale pricing.
               </p>
