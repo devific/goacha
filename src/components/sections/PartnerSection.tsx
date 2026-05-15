@@ -102,7 +102,7 @@ export default function PartnerSection() {
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-goacha !bg-stone-950 !text-[#F8F5FA] !border-stone-950 hover:!bg-stone-950/80 md:max-w-[280px] w-full justify-center py-3.5 text-[0.75rem]"
+                className="btn-goacha border-black text-black md:max-w-[280px] w-full justify-center py-3.5 text-[0.75rem]"
               >
                 <MessageCircle size={14} strokeWidth={1.5} className="mr-2" />
                 Enquire for Wholesale

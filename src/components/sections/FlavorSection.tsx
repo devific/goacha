@@ -75,7 +75,7 @@ export default function FlavorSection({ flavor, onMoreInfo, index }: Props) {
             )}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-goacha btn-goacha-solid w-full sm:w-auto justify-center"
+            className="btn-goacha  w-full sm:w-auto justify-center"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-10%" }}

@@ -115,7 +115,7 @@ export default function HeroSection() {
             href={getWhatsAppUrl("Hi, I'd like to order some Goacha Kombucha.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-goacha btn-goacha-solid w-full sm:w-auto justify-center"
+            className="btn-goacha  w-full sm:w-auto justify-center"
           >
             <MessageCircle size={13} strokeWidth={1.5} />
             Order On Whatsapp

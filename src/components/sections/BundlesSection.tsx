@@ -122,7 +122,7 @@ export default function BundlesSection() {
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-goacha !bg-stone-950 !text-[#F2F7F2] !border-stone-950 hover:!bg-stone-950/80 w-full justify-center text-xs py-3"
+                className="btn-goacha border-black text-black w-full justify-center text-xs py-3"
               >
                 <MessageCircle size={14} strokeWidth={1.5} className="mr-2" />
                 Order on WhatsApp

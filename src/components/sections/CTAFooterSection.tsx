@@ -63,7 +63,7 @@ export default function CTAFooterSection() {
             href={getWhatsAppUrl("Hi, I'd like to order some Goacha Kombucha.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-goacha !bg-stone-950 !text-[#F0F6F8] !border-stone-950 hover:!bg-stone-950/80 mt-9 px-10 py-3.5 text-[0.75rem]"
+            className="btn-goacha border-black text-black mt-9 px-10 py-3.5 text-[0.75rem]"
             initial={{ opacity: 0, scale: 0.96 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-10%" }}
