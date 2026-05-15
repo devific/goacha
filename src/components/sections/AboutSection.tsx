@@ -69,31 +69,25 @@ export default function AboutSection({ onScrollHint }: Props) {
             className="pl-0 md:pl-12 md:border-l border-stone-950/10 font-body font-light text-[0.9375rem] leading-[1.8] text-stone-950/70
               flex flex-col gap-4 md:gap-0 md:space-y-6 text-left"
           >
-            <div className="bg-[#FFF8F0]/60 md:bg-transparent border border-stone-950/5 md:border-none p-6 md:p-0 rounded-2xl md:rounded-none backdrop-blur-sm md:backdrop-blur-none">
-              <p>
-                In a world full of overly sweet sodas and deeply serious "health
-                drinks", we wanted to create something entirely different.
-                Something undeniably light, refreshing, and easy to reach for
-                every single day.
-              </p>
-            </div>
+            <p>
+              In a world full of overly sweet sodas and deeply serious "health
+              drinks", we wanted to create something entirely different.
+              Something undeniably light, refreshing, and easy to reach for
+              every single day.
+            </p>
 
-            <div className="bg-[#FFF8F0]/60 md:bg-transparent border border-stone-950/5 md:border-none p-6 md:p-0 rounded-2xl md:rounded-none backdrop-blur-sm md:backdrop-blur-none">
-              <p>
-                Crafted right here in Goa in small batches, Goacha is naturally
-                fermented, gently fizzy, and brimming with character. But more
-                than what's inside the bottle, it's about how it fits into your
-                life.
-              </p>
-            </div>
+            <p>
+              Crafted right here in Goa in small batches, Goacha is naturally
+              fermented, gently fizzy, and brimming with character. But more
+              than what's inside the bottle, it's about how it fits into your
+              life.
+            </p>
 
-            <div className="bg-[#FFF8F0]/60 md:bg-transparent border border-stone-950/5 md:border-none p-6 md:p-0 rounded-2xl md:rounded-none backdrop-blur-sm md:backdrop-blur-none">
-              <p className=" font-medium text-stone-950/90 pt-0 md:pt-4">
-                It's what you reach for on a slow afternoon. What you carry to
-                the beach. What you sip on when you want something better,
-                without overthinking it.
-              </p>
-            </div>
+            <p className=" font-medium text-stone-950/90 pt-0 md:pt-4">
+              It's what you reach for on a slow afternoon. What you carry to the
+              beach. What you sip on when you want something better, without
+              overthinking it.
+            </p>
           </div>
         </motion.div>
       </div>

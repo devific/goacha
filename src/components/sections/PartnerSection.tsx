@@ -66,44 +66,33 @@ export default function PartnerSection() {
           */}
           <div
             className="pl-0 md:pl-12 md:border-l border-stone-950/10 font-body font-light text-[0.9375rem] leading-[1.8] text-stone-950/70
-              flex flex-col gap-4 md:gap-0 md:space-y-6 text-left"
+              flex flex-col gap-4 md:gap-0 space-y-6 text-left"
           >
-            <div className="bg-[#F8F5FA]/60 md:bg-transparent border border-stone-950/5 md:border-none p-6 md:p-0 rounded-2xl md:rounded-none backdrop-blur-sm md:backdrop-blur-none">
-              <span className="font-display  text-stone-950/20 text-2xl mb-2 block md:hidden">
-                01
-              </span>
-              <p>
-                If you're looking to offer something refreshing, easy to drink,
-                and genuinely different; Goacha fits right in. We partner with
-                curated stores and menus across Goa.
-              </p>
+            <p>
+              If you're looking to offer something refreshing, easy to drink,
+              and genuinely different; Goacha fits right in. We partner with
+              curated stores and menus across Goa.
+            </p>
+
+            <div className="flex flex-col gap-3">
+              {[
+                "Strong repeat demand",
+                "Balanced flavours (not too sour)",
+                "Premium product with approachable pricing",
+              ].map((point, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <Check
+                    size={16}
+                    className="text-stone-950/80 mt-1 shrink-0"
+                  />
+                  <span className="font-body font-light text-[0.9375rem] text-stone-950/80">
+                    {point}
+                  </span>
+                </div>
+              ))}
             </div>
 
-            <div className="bg-[#F8F5FA]/60 md:bg-transparent border border-stone-950/5 md:border-none p-6 md:p-0 rounded-2xl md:rounded-none backdrop-blur-sm md:backdrop-blur-none">
-              <span className="font-display  text-stone-950/20 text-2xl mb-4 block md:hidden">
-                02
-              </span>
-
-              <div className="flex flex-col gap-3">
-                {[
-                  "Strong repeat demand",
-                  "Balanced flavours (not too sour)",
-                  "Premium product with approachable pricing",
-                ].map((point, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <Check
-                      size={16}
-                      className="text-stone-950/80 mt-1 shrink-0"
-                    />
-                    <span className="font-body font-light text-[0.9375rem] text-stone-950/80">
-                      {point}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="bg-[#F8F5FA]/60 md:bg-transparent border border-stone-950/5 md:border-none p-6 md:p-0 rounded-2xl md:rounded-none backdrop-blur-sm md:backdrop-blur-none flex flex-col md:pt-4">
+            <div className="flex flex-col">
               <p className="font-body font-medium text-stone-950/90 mb-6 ">
                 Now available in 45+ outlets and growing. Reach out for
                 wholesale pricing.
