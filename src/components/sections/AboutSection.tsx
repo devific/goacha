@@ -24,7 +24,7 @@ export default function AboutSection({ onScrollHint }: Props) {
             transition={{ duration: 0.8 }}
           >
             <div className="w-[40px] h-[1px] bg-stone-950/20" />
-            <span className="font-body font-extralight text-[0.5625rem] tracking-[0.28em] uppercase text-stone-950/60">
+            <span className="font-body font-extralight text-lg tracking-[0.28em] text-black uppercase">
               About The Brew
             </span>
             <div className="w-[40px] h-[1px] bg-stone-950/20 md:hidden" />
