@@ -80,6 +80,26 @@
   --color-bright-teal: #01f9c6;
   --color-cadet-blue: #5f9ea0;
   --color-caribbean-green: #00cc99;
+
+  --color-yellow: #ffff00;
+  --color-mustard: #ffdb58;
+  --color-blond: #faf0be;
+  --color-citrine: #e4d00a;
+
+  --color-banana: #ffe135;
+  --color-amber: #ffbf00;
+  --color-cadmium: #fff600;
+  --color-corn: #fbec5d;
+
+  --color-gold-yellow: #ffd700;
+  --color-arylide-yellow: #e9d66b;
+  --color-chartreuse: #dfff00;
+  --color-corn-silk: #fff8dc;
+
+  --color-lemon: #fff700;
+  --color-chrome: #ffa700;
+  --color-aurelion: #fdee00;
+  --color-earth-yellow: #b8860b;
 }
 
 @layer base {
