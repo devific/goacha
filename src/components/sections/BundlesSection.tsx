@@ -85,7 +85,7 @@ export default function BundlesSection() {
           {bundles.map((bundle, i) => (
             <motion.div
               key={bundle.name}
-              className="flex flex-col items-center text-center bg-stone-950/20 border border-stone-950/10 p-8 rounded-sm group"
+              className="flex flex-col items-center text-center bg-white/80 hover:bg-white/90 border border-stone-950/10 p-8 rounded-sm group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
