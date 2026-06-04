@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 export default function CTAFooterSection() {
   return (
     <div
-      className="relative w-full py-16 bg-mountain-meadow flex flex-col overflow-hidden mobile-section"
+      className="relative w-full py-16 bg-mustard flex flex-col overflow-hidden mobile-section"
       data-index={5}
     >
       {/* Decorative Blobs */}

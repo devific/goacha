@@ -58,7 +58,7 @@ export default function BundlesSection() {
 
   return (
     <div
-      className="relative w-full min-h-[100svh] py-24 bg-mountain-meadow flex flex-col items-center justify-center overflow-hidden mobile-section px-6"
+      className="relative w-full min-h-[100svh] py-24 bg-mustard flex flex-col items-center justify-center overflow-hidden mobile-section px-6"
       data-index={5}
     >
       {/* Decorative Blobs */}
