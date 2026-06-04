@@ -2,11 +2,12 @@ import { motion } from "motion/react";
 import { MessageCircle } from "lucide-react";
 import { getWhatsAppUrl } from "@/lib/constants";
 import { useEffect, useState } from "react";
+import { Button } from "../ui/button";
 
 export default function CTAFooterSection() {
   return (
     <div
-      className="relative w-full py-16 bg-mustard flex flex-col overflow-hidden mobile-section"
+      className="relative w-full py-16 bg-white flex flex-col overflow-hidden mobile-section"
       data-index={5}
     >
       {/* Decorative Blobs */}
@@ -14,7 +15,7 @@ export default function CTAFooterSection() {
       <div className="absolute bottom-[-20%] left-[0%] w-[60vw] h-[60vw] max-w-[600px] max-h-[600px] bg-blue-400/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="flex-1 flex items-center justify-center relative z-10">
-        <div className="max-w-[500px] w-full px-6 text-center flex flex-col items-center">
+        <div className="max-w-[600px] w-full px-6 text-center flex flex-col items-center">
           <motion.div
             className="flex items-center gap-4 mb-6"
             initial={{ opacity: 0, y: 10 }}
@@ -59,24 +60,27 @@ export default function CTAFooterSection() {
             ))}
           </motion.h2>
 
-          <motion.a
-            href={getWhatsAppUrl("Hi, I'd like to order some Goacha Kombucha.")}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-goacha border-black text-black mt-9 px-10 py-3.5 text-[0.75rem]"
-            initial={{ opacity: 0, scale: 0.96 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-10%" }}
-            transition={{
-              type: "spring",
-              stiffness: 100,
-              damping: 20,
-              delay: 0.3,
-            }}
-          >
-            <MessageCircle size={14} strokeWidth={1.5} className="mr-2" />
-            Order on WhatsApp
-          </motion.a>
+          <Button asChild theme="brand" variant="solid" className="mt-4">
+            <motion.a
+              href={getWhatsAppUrl(
+                "Hi, I'd like to order some Goacha Kombucha.",
+              )}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, scale: 0.96 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                damping: 20,
+                delay: 0.3,
+              }}
+            >
+              <MessageCircle size={14} strokeWidth={1.5} className="mr-2" />
+              Order on WhatsApp
+            </motion.a>
+          </Button>
         </div>
       </div>
     </div>

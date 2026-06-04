@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { MessageCircle } from "lucide-react";
 import type { Flavor } from "@/lib/flavorsData";
 import { getWhatsAppUrl } from "@/lib/constants";
+import { Button } from "@/components/ui/button";
 
 type Props = {
   flavor: Flavor;
@@ -69,42 +70,46 @@ export default function FlavorSection({ flavor, onMoreInfo, index }: Props) {
         </motion.span>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-2 w-full">
-          <motion.a
-            href={getWhatsAppUrl(
-              `Hi, I'd like to order the ${flavor.name} kombucha.`,
-            )}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-goacha  w-full sm:w-auto justify-center"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-10%" }}
-            transition={{
-              type: "spring",
-              stiffness: 100,
-              damping: 20,
-              delay: 0.4,
-            }}
-          >
-            <MessageCircle size={13} strokeWidth={1.5} className="mr-2" />
-            Order on WhatsApp
-          </motion.a>
+          <Button asChild variant="solid" theme="brand">
+            <motion.a
+              href={getWhatsAppUrl(
+                `Hi, I'd like to order the ${flavor.name} kombucha.`,
+              )}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-goacha  w-full sm:w-auto justify-center"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                damping: 20,
+                delay: 0.4,
+              }}
+            >
+              <MessageCircle size={13} strokeWidth={1.5} className="mr-2" />
+              Order on WhatsApp
+            </motion.a>
+          </Button>
 
-          <motion.button
-            onClick={onMoreInfo}
-            className="btn-goacha w-full sm:w-auto justify-center"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-10%" }}
-            transition={{
-              type: "spring",
-              stiffness: 100,
-              damping: 20,
-              delay: 0.5,
-            }}
-          >
-            More Info
-          </motion.button>
+          <Button asChild variant="default" theme="brand">
+            <motion.button
+              onClick={onMoreInfo}
+              className="btn-goacha w-full sm:w-auto justify-center"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                damping: 20,
+                delay: 0.5,
+              }}
+            >
+              More Info
+            </motion.button>
+          </Button>
         </div>
       </div>
     </div>

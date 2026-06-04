@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { MessageCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import { getWhatsAppUrl, IMAGEKIT_BASE_URL } from "@/lib/constants";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 const bundles = [
   {
@@ -58,7 +59,7 @@ export default function BundlesSection() {
 
   return (
     <div
-      className="relative w-full min-h-[100svh] py-24 bg-mustard flex flex-col items-center justify-center overflow-hidden mobile-section px-6"
+      className="relative w-full min-h-[100svh] py-24 bg-white flex flex-col items-center justify-center overflow-hidden mobile-section px-6"
       data-index={5}
     >
       {/* Decorative Blobs */}
@@ -85,7 +86,7 @@ export default function BundlesSection() {
           {bundles.map((bundle, i) => (
             <motion.div
               key={bundle.name}
-              className="flex flex-col items-center text-center bg-white/80 hover:bg-white/90 border border-stone-950/10 p-8 rounded-sm group"
+              className="flex flex-col items-center text-center bg-mustard/10 hover:bg-mustard/20 border border-stone-950/10 p-8 rounded-sm group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -116,17 +117,23 @@ export default function BundlesSection() {
                   {bundle.price}
                 </p>
               </div>
-              <a
-                href={getWhatsAppUrl(
-                  `Hi, I'd like to order the ${bundle.name} bundle.`,
-                )}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-goacha border-black text-black w-full justify-center text-xs py-3"
+              <Button
+                asChild
+                variant="solid"
+                theme="brand"
+                className="w-full justify-center"
               >
-                <MessageCircle size={14} strokeWidth={1.5} className="mr-2" />
-                Order on WhatsApp
-              </a>
+                <a
+                  href={getWhatsAppUrl(
+                    `Hi, I'd like to order the ${bundle.name} bundle.`,
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MessageCircle size={14} strokeWidth={1.5} className="mr-2" />
+                  Order on WhatsApp
+                </a>
+              </Button>
             </motion.div>
           ))}
         </div>
