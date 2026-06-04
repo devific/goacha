@@ -24,7 +24,7 @@ export default function App() {
             <MarkdownPage title="Privacy Policy" content={privacyContent} />
           }
         />
-        <Route path="/button" element={<ThemePage />} />
+        {import.meta.env.DEV && <Route path="/theme" element={<ThemePage />} />}
         <Route path="*" element={<Home />} />
       </Routes>
     </>
