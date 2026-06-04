@@ -4,7 +4,7 @@ import { motion, Variants } from "motion/react";
 import { useEffect, useState } from "react";
 import { MessageCircle, ArrowDown } from "lucide-react";
 import { getWhatsAppUrl, IMAGEKIT_BASE_URL } from "@/lib/constants";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);

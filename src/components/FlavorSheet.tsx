@@ -7,7 +7,7 @@ import {
 import { X, MessageCircle, ArrowRight } from "lucide-react";
 import type { Flavor } from "@/lib/flavorsData";
 import { getWhatsAppUrl, IMAGEKIT_BASE_URL } from "@/lib/constants";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 
 type Props = {
   flavor: Flavor;
