@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { MessageCircle, Check } from "lucide-react";
 import { getWhatsAppUrl } from "@/lib/constants";
+import { Button } from "@/components/ui/button";
 
 export default function PartnerSection() {
   return (
@@ -96,17 +97,24 @@ export default function PartnerSection() {
                 wholesale pricing.
               </p>
 
-              <a
-                href={getWhatsAppUrl(
-                  "Hi, I'm interested in partnering with Goacha for wholesale.",
-                )}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-goacha border-black text-black md:max-w-[280px] w-full justify-center py-3.5 text-[0.75rem]"
+              <Button
+                asChild
+                variant="solid"
+                theme="black"
+                className="self-start"
               >
-                <MessageCircle size={14} strokeWidth={1.5} className="mr-2" />
-                Enquire for Wholesale
-              </a>
+                <a
+                  href={getWhatsAppUrl(
+                    "Hi, I'm interested in partnering with Goacha for wholesale.",
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-goacha border-black text-black md:max-w-[280px] w-full justify-center py-3.5 text-[0.75rem]"
+                >
+                  <MessageCircle size={14} strokeWidth={1.5} className="mr-2" />
+                  Enquire for Wholesale
+                </a>
+              </Button>
             </div>
           </div>
         </motion.div>

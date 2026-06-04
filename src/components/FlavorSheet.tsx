@@ -7,6 +7,7 @@ import {
 import { X, MessageCircle, ArrowRight } from "lucide-react";
 import type { Flavor } from "@/lib/flavorsData";
 import { getWhatsAppUrl, IMAGEKIT_BASE_URL } from "@/lib/constants";
+import { Button } from "@/components/ui/button";
 
 type Props = {
   flavor: Flavor;
@@ -149,17 +150,18 @@ export default function FlavorSheet({ flavor, open, onClose }: Props) {
             alt="Goacha Logo"
             className="h-5 object-contain opacity-80"
           />
-          <a
-            href={getWhatsAppUrl(
-              `Hi, I'd like to order the ${flavor.name} kombucha.`,
-            )}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-goacha w-full justify-center border-stone-950 text-stone-950 hover:bg-stone-950/5"
-          >
-            <MessageCircle size={13} strokeWidth={1.5} className="mr-2" />
-            Order on WhatsApp
-          </a>
+          <Button asChild className="w-full" theme="brand" variant="solid">
+            <a
+              href={getWhatsAppUrl(
+                `Hi, I'd like to order the ${flavor.name} kombucha.`,
+              )}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MessageCircle size={13} strokeWidth={1.5} className="mr-2" />
+              Order on WhatsApp
+            </a>
+          </Button>
         </div>
       </SheetContent>
     </Sheet>

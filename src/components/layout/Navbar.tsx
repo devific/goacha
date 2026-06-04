@@ -4,6 +4,7 @@ import { getWhatsAppUrl, IMAGEKIT_BASE_URL } from "@/lib/constants";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { SiInstagram } from "@icons-pack/react-simple-icons";
+import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
   const location = useLocation();
@@ -82,26 +83,28 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
-          <a
-            href={getWhatsAppUrl(
-              "Hi, I'd like to enquire about Goacha Kombucha.",
-            )}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-goacha flex items-center gap-2 max-md:p-2!"
-          >
-            <MessageCircle size={13} strokeWidth={1.5} />
-            <span className="hidden sm:inline">Enquire</span>
-          </a>
-
-          <a
-            href="https://www.instagram.com/goacha_"
-            target="_blank"
-            rel="noopener noreferrer"
-            className=" btn-goacha !p-2 flex items-center justify-center text-gc-cream"
-          >
-            <SiInstagram className="size-3 md:size-5 " />
-          </a>
+          <Button asChild variant="solid" theme="brand">
+            <a
+              href={getWhatsAppUrl(
+                "Hi, I'd like to enquire about Goacha Kombucha.",
+              )}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MessageCircle size={13} strokeWidth={1.5} />
+              <span className="hidden sm:inline">Enquire</span>
+            </a>
+          </Button>
+          <Button asChild variant="ghost" size="icon" theme="brand">
+            <a
+              href="https://www.instagram.com/goacha_"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" btn-goacha !p-2 flex items-center justify-center text-gc-cream"
+            >
+              <SiInstagram className="size-3 md:size-5 " />
+            </a>
+          </Button>
 
           <button
             className="md:hidden btn-goacha !p-2 flex items-center justify-center text-gc-cream"

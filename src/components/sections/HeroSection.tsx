@@ -4,6 +4,7 @@ import { motion, Variants } from "motion/react";
 import { useEffect, useState } from "react";
 import { MessageCircle, ArrowDown } from "lucide-react";
 import { getWhatsAppUrl, IMAGEKIT_BASE_URL } from "@/lib/constants";
+import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -111,25 +112,35 @@ export default function HeroSection() {
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
           transition={{ duration: 0.8, delay: 1.5, ease: "easeOut" }}
         >
-          <a
-            href={getWhatsAppUrl("Hi, I'd like to order some Goacha Kombucha.")}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-goacha  w-full sm:w-auto justify-center"
+          <Button
+            asChild
+            variant="solid"
+            theme="brand"
+            className=" w-full sm:w-auto justify-center"
           >
-            <MessageCircle size={13} strokeWidth={1.5} />
-            Order On Whatsapp
-          </a>
+            <a
+              href={getWhatsAppUrl(
+                "Hi, I'd like to order some Goacha Kombucha.",
+              )}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MessageCircle size={13} strokeWidth={1.5} />
+              Order On Whatsapp
+            </a>
+          </Button>
 
-          <button
+          <Button
             onClick={() => {
               const el = document.getElementById("flavors");
               el?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="btn-goacha w-full sm:w-auto justify-center"
+            variant="default"
+            theme="brand"
+            className=" w-full sm:w-auto justify-center"
           >
             Explore Flavours
-          </button>
+          </Button>
         </motion.div>
       </div>
 
