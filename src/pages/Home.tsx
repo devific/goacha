@@ -4,6 +4,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
 import StatsSection from "@/components/sections/StatsSection";
 import FlavorSection from "@/components/sections/FlavorSection";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import BundlesSection from "@/components/sections/BundlesSection";
 import PartnerSection from "@/components/sections/PartnerSection";
 import CTAFooterSection from "@/components/sections/CTAFooterSection";
@@ -61,6 +62,9 @@ export default function Home() {
             onMoreInfo={() => openFlavorInfo(2)}
           />
         </div>
+      </section>
+      <section className="w-full relative">
+        <TestimonialsSection />
       </section>
       <section id="bundles" className="w-full relative">
         <BundlesSection />

@@ -101,6 +101,17 @@
   --color-chrome: #ffa700;
   --color-aurelion: #fdee00;
   --color-earth-yellow: #b8860b;
+
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 @layer base {
