@@ -6,23 +6,23 @@ import { Button } from "@/components/ui/button";
 
 const bundles = [
   {
-    name: "Starter Pack",
+    name: "The Introduction",
     number: "All 3 flavours",
-    description: "Perfect to try",
+    description: "Your first taste of Goacha",
     price: "₹600",
     image: `${IMAGEKIT_BASE_URL}/bundle-3.png`,
   },
   {
-    name: "Family Pack",
+    name: "The Ritual",
     number: "6 bottles",
-    description: "Your everyday refresh",
+    description: "For the moments that become habits",
     price: "₹1200",
     image: `${IMAGEKIT_BASE_URL}/bundle-6.png`,
   },
   {
-    name: "Party Pack",
+    name: "The Gathering",
     number: "12 bottles",
-    description: "Made for sharing",
+    description: "More bottles, more stories",
     price: "₹2400",
     image: `${IMAGEKIT_BASE_URL}/bundle-12.png`,
   },
@@ -96,7 +96,7 @@ export default function BundlesSection() {
                 <img
                   src={`${bundle.image}?tr=w-400,fo-auto,q-80`}
                   alt={bundle.name}
-                  className="w-full h-full object-cover opacity-80 md:grayscale group-hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-full object-cover opacity-80 transition-all duration-500"
                   loading="lazy"
                   referrerPolicy="no-referrer"
                   onError={(e) => {
@@ -164,7 +164,7 @@ export default function BundlesSection() {
                   <img
                     src={`${bundles[currentIndex].image}?tr=w-400,fo-auto,q-80`}
                     alt={bundles[currentIndex].name}
-                    className="w-full h-full object-cover opacity-80 md:grayscale group-hover:grayscale-0 transition-all duration-500"
+                    className="w-full h-full object-cover opacity-80 transition-all duration-500"
                     loading="lazy"
                     referrerPolicy="no-referrer"
                     onError={(e) => {
