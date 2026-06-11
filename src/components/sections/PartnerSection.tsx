@@ -93,8 +93,7 @@ export default function PartnerSection() {
 
             <div className="flex flex-col">
               <p className=" mb-6 ">
-                Now available in 45+ outlets and growing. Reach out for
-                wholesale pricing.
+                Expanding across Goa. Reach out for wholesale pricing.
               </p>
 
               <Button
