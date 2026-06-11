@@ -13,7 +13,6 @@ export default function HeroSection() {
     setIsVisible(true);
   }, []);
 
-  // Parent container for stagger animation
   const container: Variants = {
     hidden: {},
     visible: {
@@ -24,9 +23,12 @@ export default function HeroSection() {
     },
   };
 
-  // Each word animation
   const child: Variants = {
-    hidden: { opacity: 0, y: 30, filter: "blur(8px)" },
+    hidden: {
+      opacity: 0,
+      y: 30,
+      filter: "blur(8px)",
+    },
     visible: {
       opacity: 1,
       y: 0,
@@ -40,46 +42,120 @@ export default function HeroSection() {
 
   return (
     <div
-      className="relative w-full h-[100svh] flex flex-col items-center justify-end pb-12 overflow-hidden mobile-section"
+      className="
+        relative w-full h-[100svh]
+        flex flex-col justify-end items-center
+        lg:justify-center lg:items-start
+        pb-12 lg:pb-0
+        overflow-hidden mobile-section
+      "
       data-index={0}
     >
+      {/* Background */}
       <picture>
         <source
           media="(max-width: 768px)"
           srcSet={`${IMAGEKIT_BASE_URL}/phone-hero.jpg?tr=w-1080,h-1920,fo-auto,q-85`}
         />
+
         <img
-          src={`${IMAGEKIT_BASE_URL}/original-hero.jpg?tr=w-1920,h-1080,fo-auto,q-85`}
+          src={`${IMAGEKIT_BASE_URL}/hero-right.jpg?tr=w-1920,h-1080,fo-auto,q-85`}
           alt="Goacha Kombucha"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="
+    absolute inset-0
+    w-full h-full
+    object-cover
+    object-center
+    lg:object-right
+  "
           loading="eager"
           referrerPolicy="no-referrer"
         />
       </picture>
 
-      <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-[#0A0A08] via-[#0A0A08]/10 to-transparent" />
+      {/* Mobile overlay (same as before) */}
+      <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-[#0A0A08] via-[#0A0A08]/10 to-transparent lg:hidden" />
 
-      <div className="relative z-10 max-w-[600px] w-full px-6 text-center flex flex-col items-center pb-8">
+      {/* Desktop overlay */}
+      <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-[#0A0A08]/88 via-[#0A0A08]/40 to-transparent" />
+
+      {/* Content */}
+      <div
+        className="
+          relative z-10
+          w-full
+          max-w-[600px]
+          lg:max-w-[720px]
+          px-6
+          lg:px-16
+          text-center
+          lg:text-left
+          flex flex-col
+          items-center
+          lg:items-start
+          pb-8
+          lg:pb-0
+        "
+      >
         {/* Top label */}
         <motion.span
-          className="font-body text-[0.625rem] tracking-[0.25em] uppercase text-white"
-          initial={{ opacity: 0, y: 10, filter: "blur(4px)" }}
+          className="
+            font-body
+            text-[0.625rem]
+            lg:text-[0.7rem]
+            tracking-[0.25em]
+            lg:tracking-[0.28em]
+            uppercase
+            text-white
+            lg:text-[#F2EDE4]/75
+            mb-0
+            lg:mb-4
+          "
+          initial={{
+            opacity: 0,
+            y: 10,
+            filter: "blur(4px)",
+          }}
           animate={
             isVisible
-              ? { opacity: 1, y: 0, filter: "blur(0px)" }
-              : { opacity: 0, y: 10, filter: "blur(4px)" }
+              ? {
+                  opacity: 1,
+                  y: 0,
+                  filter: "blur(0px)",
+                }
+              : {
+                  opacity: 0,
+                  y: 10,
+                  filter: "blur(4px)",
+                }
           }
-          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+          transition={{
+            duration: 0.8,
+            delay: 0.6,
+            ease: "easeOut",
+          }}
         >
           Handcrafted Kombucha
         </motion.span>
 
-        {/* Fixed heading animation */}
+        {/* Heading */}
         <motion.h1
           variants={container}
           initial="hidden"
           animate={isVisible ? "visible" : "hidden"}
-          className="font-display  text-[clamp(1.75rem,4vw,3rem)] text-[#F2EDE4] mb-2 flex justify-center"
+          className="
+            font-display
+            text-[clamp(1.75rem,4vw,3rem)]
+            lg:text-[clamp(3rem,6vw,5.5rem)]
+            text-[#F2EDE4]
+            mb-2
+            lg:mb-5
+            flex
+            flex-wrap
+            justify-center
+            lg:justify-start
+            lg:leading-[0.95]
+          "
         >
           {"Not Soda. Not Boring.".split(" ").map((word, i) => (
             <motion.span
@@ -92,31 +168,84 @@ export default function HeroSection() {
           ))}
         </motion.h1>
 
+        {/* Hidden SEO copy */}
         <motion.span
-          className="font-body font-extralight text-[0.75rem] tracking-[0.28em] uppercase text-[#F2EDE4]/80 mb-8 sr-only"
-          initial={{ opacity: 0, y: 10, filter: "blur(4px)" }}
+          className="
+            font-body
+            font-extralight
+            text-[0.75rem]
+            tracking-[0.28em]
+            uppercase
+            text-[#F2EDE4]/80
+            mb-8
+            sr-only
+          "
+          initial={{
+            opacity: 0,
+            y: 10,
+            filter: "blur(4px)",
+          }}
           animate={
             isVisible
-              ? { opacity: 1, y: 0, filter: "blur(0px)" }
-              : { opacity: 0, y: 10, filter: "blur(4px)" }
+              ? {
+                  opacity: 1,
+                  y: 0,
+                  filter: "blur(0px)",
+                }
+              : {
+                  opacity: 0,
+                  y: 10,
+                  filter: "blur(4px)",
+                }
           }
-          transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}
+          transition={{
+            duration: 0.8,
+            delay: 1.2,
+            ease: "easeOut",
+          }}
         >
           Not soda. Not boring.
         </motion.span>
 
         {/* Buttons */}
         <motion.div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full"
-          initial={{ opacity: 0, y: 10 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-          transition={{ duration: 0.8, delay: 1.5, ease: "easeOut" }}
+          className="
+            flex
+            flex-col
+            sm:flex-row
+            items-center
+            lg:items-start
+            justify-center
+            lg:justify-start
+            gap-4
+            w-full
+          "
+          initial={{
+            opacity: 0,
+            y: 10,
+          }}
+          animate={
+            isVisible
+              ? {
+                  opacity: 1,
+                  y: 0,
+                }
+              : {
+                  opacity: 0,
+                  y: 10,
+                }
+          }
+          transition={{
+            duration: 0.8,
+            delay: 1.5,
+            ease: "easeOut",
+          }}
         >
           <Button
             asChild
             variant="solid"
             theme="green"
-            className=" w-full sm:w-auto justify-center"
+            className="w-full sm:w-auto justify-center"
           >
             <a
               href={getWhatsAppUrl(
@@ -133,11 +262,13 @@ export default function HeroSection() {
           <Button
             onClick={() => {
               const el = document.getElementById("flavors");
-              el?.scrollIntoView({ behavior: "smooth" });
+              el?.scrollIntoView({
+                behavior: "smooth",
+              });
             }}
             variant="default"
             theme="brand"
-            className=" w-full sm:w-auto justify-center"
+            className="w-full sm:w-auto justify-center"
           >
             Explore Flavours
           </Button>
@@ -146,14 +277,31 @@ export default function HeroSection() {
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        className="
+          absolute
+          bottom-8
+          left-1/2
+          -translate-x-1/2
+          lg:left-16
+          lg:translate-x-0
+          flex flex-col items-center
+        "
         initial={{ opacity: 0 }}
         animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-        transition={{ duration: 0.8, delay: 1.5 }}
+        transition={{
+          duration: 0.8,
+          delay: 1.5,
+        }}
       >
         <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          animate={{
+            y: [0, 6, 0],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
         >
           <ArrowDown
             size={14}
