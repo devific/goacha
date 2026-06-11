@@ -16,7 +16,7 @@ export default function Footer() {
               className="h-6 object-contain self-start opacity-90"
             />
             <p className="font-body font-light text-sm text-stone-100/60 max-w-[250px]">
-              Small batch, raw & live kombucha brewed naturally in Goa.
+              Raw & live. Small-batch brewed. Crafted in Goa.
             </p>
           </div>
 
