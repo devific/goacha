@@ -37,9 +37,9 @@ export default function AboutSection({ onScrollHint }: Props) {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            Small Batch.
+            Small Batch
             <br />
-            Big Life.
+            Raw & Unpasteurized
           </motion.h2>
 
           <motion.p
