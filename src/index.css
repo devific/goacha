@@ -176,3 +176,22 @@
     background-color: rgba(242, 237, 228, 0.75);
   }
 }
+
+
+/* Marquee slider for brand logos */
+.marquee {
+  overflow: hidden;
+}
+.marquee__inner {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+.marquee:hover .marquee__inner {
+  animation-play-state: paused;
+}
+.brand-logo {
+  height: 3rem;
+  margin-right: 2rem;
+  flex-shrink: 0;
+}

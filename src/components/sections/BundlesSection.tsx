@@ -74,11 +74,11 @@ export default function BundlesSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="w-[30px] h-[1px] bg-stone-950/20" />
+          <div className="w-7.5 h-px bg-stone-950/20" />
           <span className="font-body text-xs tracking-[0.28em] uppercase text-stone-950/60">
             Bundles
           </span>
-          <div className="w-[30px] h-[1px] bg-stone-950/20" />
+          <div className="w-7.5 h-px bg-stone-950/20" />
         </motion.div>
 
         {/* Desktop Grid */}
