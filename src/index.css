@@ -103,6 +103,8 @@
   --color-aurelion: #fdee00;
   --color-earth-yellow: #b8860b;
 
+  --color-deep-forest: #1f4d3a;
+
   --animate-marquee: marquee 40s linear infinite;
 
   @keyframes marquee {

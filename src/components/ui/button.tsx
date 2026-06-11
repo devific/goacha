@@ -24,6 +24,7 @@ const buttonVariants = cva(
         default: "",
         black: "",
         brand: "",
+        green: "", // ← add
       },
     },
 
@@ -96,6 +97,30 @@ const buttonVariants = cva(
         variant: "link",
         theme: "brand",
         class: "text-brand",
+      },
+
+      // Green theme (deep-forest)
+      {
+        variant: "default",
+        theme: "green",
+        class:
+          "text-deep-forest border-deep-forest/50 hover:bg-deep-forest/10 hover:border-deep-forest/70 border",
+      },
+      {
+        variant: "solid",
+        theme: "green",
+        class:
+          "bg-deep-forest text-stone-50 border-none hover:bg-deep-forest/90",
+      },
+      {
+        variant: "ghost",
+        theme: "green",
+        class: "text-deep-forest hover:bg-deep-forest/10",
+      },
+      {
+        variant: "link",
+        theme: "green",
+        class: "text-deep-forest",
       },
     ],
 

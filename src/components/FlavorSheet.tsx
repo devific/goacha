@@ -149,7 +149,7 @@ export default function FlavorSheet({ flavor, open, onClose }: Props) {
             />
           </div>
 
-          <Button asChild className="w-full" theme="brand" variant="solid">
+          <Button asChild className="w-full" theme="green" variant="solid">
             <a
               href={getWhatsAppUrl(
                 `Hi, I'd like to order the ${flavor.name} kombucha.`,

@@ -59,7 +59,7 @@ export default function CTAFooterSection() {
             ))}
           </motion.h2>
 
-          <Button asChild theme="brand" variant="solid" className="mt-4">
+          <Button asChild theme="green" variant="solid" className="mt-4">
             <motion.a
               href={getWhatsAppUrl(
                 "Hi, I'd like to order some Goacha Kombucha.",

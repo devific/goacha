@@ -120,7 +120,7 @@ export default function BundlesSection() {
               <Button
                 asChild
                 variant="solid"
-                theme="brand"
+                theme="green"
                 className="w-full justify-center"
               >
                 <a

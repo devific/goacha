@@ -115,7 +115,7 @@ export default function HeroSection() {
           <Button
             asChild
             variant="solid"
-            theme="brand"
+            theme="green"
             className=" w-full sm:w-auto justify-center"
           >
             <a
