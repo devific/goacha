@@ -59,12 +59,12 @@ export default function BundlesSection() {
 
   return (
     <div
-      className="relative w-full min-h-[100svh] py-24 bg-white flex flex-col items-center justify-center overflow-hidden mobile-section px-6"
+      className="relative w-full min-h-[100svh] py-24 bg-pale-yellow flex flex-col items-center justify-center overflow-hidden mobile-section px-6"
       data-index={5}
     >
       {/* Decorative Blobs */}
-      <div className="absolute top-[10%] right-[-10%] w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] bg-emerald-400/10 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-[0%] left-[-10%] w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] bg-teal-400/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-[10%] right-[-10%] w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] bg-yellow-400/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-[0%] left-[-10%] w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] bg-yellow-400/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-6xl w-full flex flex-col items-center relative z-10">
         <motion.div
@@ -86,7 +86,7 @@ export default function BundlesSection() {
           {bundles.map((bundle, i) => (
             <motion.div
               key={bundle.name}
-              className="flex flex-col items-center text-center bg-mustard/10 hover:bg-mustard/20 border border-stone-950/10 p-8 rounded-sm group"
+              className="flex flex-col items-center text-center bg-white border border-stone-950/10 p-8 rounded-sm group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
