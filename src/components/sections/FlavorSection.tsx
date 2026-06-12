@@ -70,7 +70,7 @@ export default function FlavorSection({ flavor, onMoreInfo, index }: Props) {
         </motion.span>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-2 w-full">
-          <Button asChild variant="solid" theme="brand">
+          <Button asChild variant="solid" theme="green">
             <motion.a
               href={getWhatsAppUrl(
                 `Hi, I'd like to order the ${flavor.name} kombucha.`,

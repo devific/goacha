@@ -86,6 +86,7 @@
   --color-mustard: #ffdb58;
   --color-blond: #faf0be;
   --color-citrine: #e4d00a;
+  --color-pale-yellow: #f7f3ea;
 
   --color-banana: #ffe135;
   --color-amber: #ffbf00;
@@ -101,6 +102,8 @@
   --color-chrome: #ffa700;
   --color-aurelion: #fdee00;
   --color-earth-yellow: #b8860b;
+
+  --color-deep-forest: #1f4d3a;
 
   --animate-marquee: marquee 40s linear infinite;
 
@@ -172,4 +175,23 @@
   .btn-goacha-solid:hover {
     background-color: rgba(242, 237, 228, 0.75);
   }
+}
+
+
+/* Marquee slider for brand logos */
+.marquee {
+  overflow: hidden;
+}
+.marquee__inner {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+.marquee:hover .marquee__inner {
+  animation-play-state: paused;
+}
+.brand-logo {
+  height: 3rem;
+  margin-right: 2rem;
+  flex-shrink: 0;
 }

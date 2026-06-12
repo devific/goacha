@@ -6,12 +6,12 @@ import { Button } from "@/components/ui/button";
 export default function CTAFooterSection() {
   return (
     <div
-      className="relative w-full py-16 bg-white flex flex-col overflow-hidden mobile-section"
+      className="relative w-full py-16 bg-pale-yellow flex flex-col overflow-hidden mobile-section"
       data-index={5}
     >
       {/* Decorative Blobs */}
-      <div className="absolute top-[0%] right-[10%] w-[50vw] h-[50vw] max-w-[500px] max-h-[500px] bg-cyan-400/10 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-[-20%] left-[0%] w-[60vw] h-[60vw] max-w-[600px] max-h-[600px] bg-blue-400/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-[0%] right-[10%] w-[50vw] h-[50vw] max-w-[500px] max-h-[500px] bg-yellow-400/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-[-20%] left-[0%] w-[60vw] h-[60vw] max-w-[600px] max-h-[600px] bg-yellow-400/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="flex-1 flex items-center justify-center relative z-10">
         <div className="max-w-[600px] w-full px-6 text-center flex flex-col items-center">
@@ -59,7 +59,7 @@ export default function CTAFooterSection() {
             ))}
           </motion.h2>
 
-          <Button asChild theme="brand" variant="solid" className="mt-4">
+          <Button asChild theme="green" variant="solid" className="mt-4">
             <motion.a
               href={getWhatsAppUrl(
                 "Hi, I'd like to order some Goacha Kombucha.",

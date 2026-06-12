@@ -66,7 +66,7 @@ const reviews = [
 
 function ReviewCard({ review }: { review: (typeof reviews)[0] }) {
   return (
-    <div className="w-[300px] sm:w-[380px] p-8 bg-mustard/10 hover:bg-mustard/20 backdrop-blur-md border border-stone-950/5 rounded-2xl flex flex-col gap-6 shrink-0 transition-colors ">
+    <div className="w-[300px] sm:w-[380px] p-8 bg-white backdrop-blur-md border border-stone-950/5 rounded-2xl flex flex-col gap-6 shrink-0 transition-colors ">
       <div className="flex text-amber-500 mb-[-10px]">
         {/* Simple 5-star representation */}
         {[...Array(5)].map((_, i) => (
@@ -99,13 +99,9 @@ const ReviewList = () => (
 export default function TestimonialsSection() {
   return (
     <div
-      className="relative w-full pt-24 bg-white flex flex-col items-center justify-center overflow-hidden"
+      className="relative w-full pt-24 bg-pale-yellow flex flex-col items-center justify-center overflow-hidden"
       data-index={5}
     >
-      {/* Decorative Blobs */}
-      <div className="absolute top-[0%] left-[-10%] w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] bg-teal-400/10 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-[-10%] right-[-5%] w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] bg-cyan-400/10 rounded-full blur-[100px] pointer-events-none" />
-
       <div className="max-w-6xl w-full px-6 flex flex-col items-center relative z-10 mb-16">
         <motion.div
           className="flex items-center gap-4 mb-6"

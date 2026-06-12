@@ -7,12 +7,12 @@ type Props = {
 export default function AboutSection({ onScrollHint }: Props) {
   return (
     <div
-      className="relative w-full min-h-[100svh] py-32 bg-white flex items-center justify-center overflow-hidden mobile-section"
+      className="relative w-full min-h-[100svh] py-32 bg-pale-yellow flex items-center justify-center overflow-hidden mobile-section"
       data-index={1}
     >
       {/* Decorative Blobs */}
-      <div className="absolute top-[-20%] left-[5%] w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] bg-fuchsia-400/10 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-[10%] right-[-5%] w-[45vw] h-[45vw] max-w-[550px] max-h-[550px] bg-purple-400/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-[-20%] left-[5%] w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] bg-yellow-400/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-[10%] right-[-5%] w-[45vw] h-[45vw] max-w-[550px] max-h-[550px] bg-yellow-400/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-6xl w-full px-6 lg:px-12 text-center md:text-left flex flex-col md:flex-row items-center gap-10 md:gap-16 relative z-10">
         <div className="flex-1 max-w-lg">
@@ -37,9 +37,9 @@ export default function AboutSection({ onScrollHint }: Props) {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            Small Batch.
+            Small Batch
             <br />
-            Big Life.
+            Raw & Unpasteurized
           </motion.h2>
 
           <motion.p

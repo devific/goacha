@@ -36,7 +36,6 @@ const commonDetails = [
   "Made with real ingredients",
   "Best served chilled",
   "Refrigerate at all times",
-  "*Contains live cultures. Taste and carbonation may vary slightly over time.",
 ];
 
 export const flavors: Flavor[] = [
@@ -46,7 +45,7 @@ export const flavors: Flavor[] = [
     subtitle: "Apple · Chamomile",
     tagline: "Smooth, mellow, and easy to sip.",
     ingredients:
-      "Filtered H20, Kombucha Culture, Loose leaf Green Tea & Black Tea, Cane Sugar, Apple & Chamomile.",
+      "Filtered H20, Kombucha Culture, Loose leaf Green Tea & Black Tea, Cane Sugar, Apple & Chamomile",
     description: "Made for slow evenings and easy conversations.",
     image: `${IMAGEKIT_BASE_URL}/gh-dp-fill.jpg?tr=h-1080,fo-auto,q-85`,
     imageMobile: `${IMAGEKIT_BASE_URL}/gh-mb-fill.jpg?tr=w-1080,fo-auto,q-80`,
@@ -63,7 +62,7 @@ export const flavors: Flavor[] = [
         sodium: "16.1 mg",
       },
       disclaimer:
-        "*nutrition facts at the time of packing varies over time due to live cultures",
+        "*Nutrition facts at the time of packaging; varies over time due to live cultures.",
     },
     details: commonDetails,
   },
@@ -73,7 +72,7 @@ export const flavors: Flavor[] = [
     subtitle: "Hibiscus · Mint · Lime · Ginger",
     tagline: "Bold, refreshing, and full of character.",
     ingredients:
-      "Filtered H20, Kombucha Culture, Loose leaf Green Tea & Black Tea, Cane Sugar, Ginger, Dried Hibiscus, Mint & Lime.",
+      "Filtered H20, Kombucha Culture, Loose leaf Green Tea & Black Tea, Cane Sugar, Ginger, Dried Hibiscus, Mint & Lime",
     description: "When you want something a little different.",
     image: `${IMAGEKIT_BASE_URL}/rr-dp-fill.jpg?tr=h-1080,fo-auto,q-85`,
     imageMobile: `${IMAGEKIT_BASE_URL}/rr-mb-fill.jpg?tr=w-1080,fo-auto,q-80`,
@@ -90,7 +89,7 @@ export const flavors: Flavor[] = [
         sodium: "5.74 mg",
       },
       disclaimer:
-        "*nutrition facts at the time of packing varies over time due to live cultures",
+        "*Nutrition facts at the time of packaging; varies over time due to live cultures.",
     },
     details: commonDetails,
   },
@@ -100,7 +99,7 @@ export const flavors: Flavor[] = [
     subtitle: "Lemongrass · Ginger",
     tagline: "Bright, zesty, and beautifully balanced.",
     ingredients:
-      "Filtered H20, Kombucha Culture, Lose leaf Green Tea & Black Tea, Cane Sugar, Lemongrass & Ginger.",
+      "Filtered H20, Kombucha Culture, Loose leaf Green Tea & Black Tea, Cane Sugar, Lemongrass & Ginger",
     description: "Your everyday reset.",
     image: `${IMAGEKIT_BASE_URL}/ib-dp-fill.jpg?tr=h-1080,fo-auto,q-85`,
     imageMobile: `${IMAGEKIT_BASE_URL}/ib-mb-fill.jpg?tr=w-1080,fo-auto,q-80`,
@@ -117,7 +116,7 @@ export const flavors: Flavor[] = [
         sodium: "5.8 mg",
       },
       disclaimer:
-        "*nutrition facts at the time of packing varies over time due to live cultures",
+        "*Nutrition facts at the time of packaging; varies over time due to live cultures.",
     },
     details: commonDetails,
   },

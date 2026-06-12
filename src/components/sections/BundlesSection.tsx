@@ -6,23 +6,23 @@ import { Button } from "@/components/ui/button";
 
 const bundles = [
   {
-    name: "Starter Pack",
+    name: "The Introduction",
     number: "All 3 flavours",
-    description: "Perfect to try",
+    description: "Your first taste of Goacha",
     price: "₹600",
     image: `${IMAGEKIT_BASE_URL}/bundle-3.png`,
   },
   {
-    name: "Family Pack",
+    name: "The Ritual",
     number: "6 bottles",
-    description: "Your everyday refresh",
+    description: "For the moments that become habits",
     price: "₹1200",
     image: `${IMAGEKIT_BASE_URL}/bundle-6.png`,
   },
   {
-    name: "Party Pack",
+    name: "The Gathering",
     number: "12 bottles",
-    description: "Made for sharing",
+    description: "More bottles, more stories",
     price: "₹2400",
     image: `${IMAGEKIT_BASE_URL}/bundle-12.png`,
   },
@@ -59,12 +59,12 @@ export default function BundlesSection() {
 
   return (
     <div
-      className="relative w-full min-h-[100svh] py-24 bg-white flex flex-col items-center justify-center overflow-hidden mobile-section px-6"
+      className="relative w-full min-h-[100svh] py-24 bg-pale-yellow flex flex-col items-center justify-center overflow-hidden mobile-section px-6"
       data-index={5}
     >
       {/* Decorative Blobs */}
-      <div className="absolute top-[10%] right-[-10%] w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] bg-emerald-400/10 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-[0%] left-[-10%] w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] bg-teal-400/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-[10%] right-[-10%] w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] bg-yellow-400/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-[0%] left-[-10%] w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] bg-yellow-400/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-6xl w-full flex flex-col items-center relative z-10">
         <motion.div
@@ -74,11 +74,11 @@ export default function BundlesSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="w-[30px] h-[1px] bg-stone-950/20" />
+          <div className="w-7.5 h-px bg-stone-950/20" />
           <span className="font-body text-xs tracking-[0.28em] uppercase text-stone-950/60">
             Bundles
           </span>
-          <div className="w-[30px] h-[1px] bg-stone-950/20" />
+          <div className="w-7.5 h-px bg-stone-950/20" />
         </motion.div>
 
         {/* Desktop Grid */}
@@ -86,7 +86,7 @@ export default function BundlesSection() {
           {bundles.map((bundle, i) => (
             <motion.div
               key={bundle.name}
-              className="flex flex-col items-center text-center bg-mustard/10 hover:bg-mustard/20 border border-stone-950/10 p-8 rounded-sm group"
+              className="flex flex-col items-center text-center bg-white border border-stone-950/10 p-8 rounded-sm group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -96,7 +96,7 @@ export default function BundlesSection() {
                 <img
                   src={`${bundle.image}?tr=w-400,fo-auto,q-80`}
                   alt={bundle.name}
-                  className="w-full h-full object-cover opacity-80 md:grayscale group-hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-full object-cover opacity-80 transition-all duration-500"
                   loading="lazy"
                   referrerPolicy="no-referrer"
                   onError={(e) => {
@@ -120,7 +120,7 @@ export default function BundlesSection() {
               <Button
                 asChild
                 variant="solid"
-                theme="brand"
+                theme="green"
                 className="w-full justify-center"
               >
                 <a
@@ -164,7 +164,7 @@ export default function BundlesSection() {
                   <img
                     src={`${bundles[currentIndex].image}?tr=w-400,fo-auto,q-80`}
                     alt={bundles[currentIndex].name}
-                    className="w-full h-full object-cover opacity-80 md:grayscale group-hover:grayscale-0 transition-all duration-500"
+                    className="w-full h-full object-cover opacity-80 transition-all duration-500"
                     loading="lazy"
                     referrerPolicy="no-referrer"
                     onError={(e) => {

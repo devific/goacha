@@ -12,6 +12,7 @@ import FlavorSheet from "@/components/FlavorSheet";
 import { flavors } from "@/lib/flavorsData";
 
 import { SEO } from "@/components/SEO";
+import BrandsSection from "@/components/sections/BrandsSection";
 
 export default function Home() {
   const [sheetOpen, setSheetOpen] = useState(false);
@@ -63,8 +64,11 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="w-full relative">
+      {/* <section className="w-full relative">
         <TestimonialsSection />
+      </section> */}
+      <section className="w-full relative">
+        <BrandsSection />
       </section>
       <section id="bundles" className="w-full relative">
         <BundlesSection />
