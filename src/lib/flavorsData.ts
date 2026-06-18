@@ -29,7 +29,7 @@ export type Flavor = {
 const commonDetails = [
   "Small-batch brewed in Goa",
   "Naturally fermented with live cultures",
-  "Raw and unpasteurised",
+  "Raw and Unpasteurized",
   "Light, balanced, and easy to drink",
   "No added preservatives",
   "Naturally carbonated",
