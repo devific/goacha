@@ -14,10 +14,10 @@ export default function AboutSection({ onScrollHint }: Props) {
       <div className="absolute top-[-20%] left-[5%] w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] bg-yellow-400/10 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-[10%] right-[-5%] w-[45vw] h-[45vw] max-w-[550px] max-h-[550px] bg-yellow-400/10 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="max-w-6xl w-full px-6 lg:px-12 text-center md:text-left flex flex-col md:flex-row items-center gap-10 md:gap-16 relative z-10">
+      <div className="max-w-6xl w-full px-6 lg:px-12 text-left flex flex-col md:flex-row gap-10 md:gap-16 relative z-10">
         <div className="flex-1 max-w-lg">
           <motion.div
-            className="flex items-center justify-center md:justify-start gap-4 mb-8"
+            className="flex items-center  justify-start gap-4 mb-8"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -62,12 +62,12 @@ export default function AboutSection({ onScrollHint }: Props) {
           transition={{ duration: 1, delay: 0.4 }}
         >
           {/* 
-            Desktop: standard stacked text with vertical border
-            Mobile: vertically stacked cards
-          */}
+              Desktop: standard stacked text with vertical border
+              Mobile: vertically stacked cards
+            */}
           <div
             className="pl-0 md:pl-12 md:border-l border-stone-950/10 font-body text-[0.9375rem] leading-[1.8] 
-              flex flex-col gap-4 md:gap-0 md:space-y-6 text-left font-medium text-stone-950/90"
+                flex flex-col gap-4 md:gap-0 md:space-y-6 text-left font-medium text-stone-950/90"
           >
             <p>
               In a world full of overly sweet sodas and deeply serious "health

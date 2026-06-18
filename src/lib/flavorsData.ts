@@ -29,7 +29,7 @@ export type Flavor = {
 const commonDetails = [
   "Small-batch brewed in Goa",
   "Naturally fermented with live cultures",
-  "Raw and unpasteurised",
+  "Raw and Unpasteurized",
   "Light, balanced, and easy to drink",
   "No added preservatives",
   "Naturally carbonated",
@@ -45,7 +45,7 @@ export const flavors: Flavor[] = [
     subtitle: "Apple · Chamomile",
     tagline: "Smooth, mellow, and easy to sip.",
     ingredients:
-      "Filtered H20, Kombucha Culture, Loose leaf Green Tea & Black Tea, Cane Sugar, Apple & Chamomile",
+      "Filtered H20, Kombucha Culture, Loose Leaf Green Tea & Black Tea, Cane Sugar, Apple & Chamomile",
     description: "Made for slow evenings and easy conversations.",
     image: `${IMAGEKIT_BASE_URL}/gh-dp-fill.jpg?tr=h-1080,fo-auto,q-85`,
     imageMobile: `${IMAGEKIT_BASE_URL}/gh-mb-fill.jpg?tr=w-1080,fo-auto,q-80`,
@@ -72,7 +72,7 @@ export const flavors: Flavor[] = [
     subtitle: "Hibiscus · Mint · Lime · Ginger",
     tagline: "Bold, refreshing, and full of character.",
     ingredients:
-      "Filtered H20, Kombucha Culture, Loose leaf Green Tea & Black Tea, Cane Sugar, Ginger, Dried Hibiscus, Mint & Lime",
+      "Filtered H20, Kombucha Culture, Loose Leaf Green Tea & Black Tea, Cane Sugar, Ginger, Dried Hibiscus, Mint & Lime",
     description: "When you want something a little different.",
     image: `${IMAGEKIT_BASE_URL}/rr-dp-fill.jpg?tr=h-1080,fo-auto,q-85`,
     imageMobile: `${IMAGEKIT_BASE_URL}/rr-mb-fill.jpg?tr=w-1080,fo-auto,q-80`,
@@ -99,7 +99,7 @@ export const flavors: Flavor[] = [
     subtitle: "Lemongrass · Ginger",
     tagline: "Bright, zesty, and beautifully balanced.",
     ingredients:
-      "Filtered H20, Kombucha Culture, Loose leaf Green Tea & Black Tea, Cane Sugar, Lemongrass & Ginger",
+      "Filtered H20, Kombucha Culture, Loose Leaf Green Tea & Black Tea, Cane Sugar, Lemongrass & Ginger",
     description: "Your everyday reset.",
     image: `${IMAGEKIT_BASE_URL}/ib-dp-fill.jpg?tr=h-1080,fo-auto,q-85`,
     imageMobile: `${IMAGEKIT_BASE_URL}/ib-mb-fill.jpg?tr=w-1080,fo-auto,q-80`,

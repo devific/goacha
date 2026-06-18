@@ -16,7 +16,7 @@ export default function Footer() {
               className="h-6 object-contain self-start opacity-90"
             />
             <p className="font-body font-light text-sm text-stone-100/60 max-w-[250px]">
-              Raw & live. Small-batch brewed. Crafted in Goa.
+              Raw & live. <br /> Small-batch brewed. <br /> Crafted in Goa.
             </p>
           </div>
 

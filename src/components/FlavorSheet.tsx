@@ -34,10 +34,6 @@ export default function FlavorSheet({ flavor, open, onClose }: Props) {
             <h2 className="mb-3 font-display text-4xl font-black leading-tight text-white">
               {flavor.name}
             </h2>
-
-            <p className="max-w-md text-base leading-7 text-stone-300">
-              {flavor.tagline}
-            </p>
           </header>
 
           <div className="space-y-10 px-8 py-8">
@@ -46,6 +42,10 @@ export default function FlavorSheet({ flavor, open, onClose }: Props) {
               <h3 className="mb-4 text-xs font-medium uppercase tracking-wider text-stone-400">
                 About this flavour
               </h3>
+
+              <p className="text-sm leading-7 text-stone-200">
+                {flavor.tagline}
+              </p>
 
               <p className="text-sm leading-7 text-stone-200">
                 {flavor.description}
