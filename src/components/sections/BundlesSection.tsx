@@ -185,17 +185,28 @@ export default function BundlesSection() {
                     {bundles[currentIndex].price}
                   </p>
                 </div>
-                <a
-                  href={getWhatsAppUrl(
-                    `Hi, I'd like to order the ${bundles[currentIndex].name} bundle.`,
-                  )}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-goacha !bg-stone-950 !text-[#F2F7F2] !border-stone-950 hover:!bg-stone-950/80 w-full justify-center text-xs py-2.5"
+
+                <Button
+                  asChild
+                  variant="solid"
+                  theme="green"
+                  className="w-full justify-center"
                 >
-                  <MessageCircle size={14} strokeWidth={1.5} className="mr-2" />
-                  Order
-                </a>
+                  <a
+                    href={getWhatsAppUrl(
+                      `Hi, I'd like to order the ${bundles[currentIndex].name} bundle.`,
+                    )}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MessageCircle
+                      size={14}
+                      strokeWidth={1.5}
+                      className="mr-2"
+                    />
+                    Order
+                  </a>
+                </Button>
               </motion.div>
             </AnimatePresence>
           </div>
