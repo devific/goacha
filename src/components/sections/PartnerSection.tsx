@@ -38,7 +38,7 @@ export default function PartnerSection() {
             transition={{ duration: 0.8 }}
           >
             Stock Goacha.
-            <br className="hidden md:block" /> Bring the Brew.
+            <br className="hidden md:block" /> Serve Something Better.
           </motion.h2>
 
           <motion.p
