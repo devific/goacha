@@ -70,9 +70,9 @@ export default function PartnerSection() {
               flex flex-col gap-4 md:gap-0 space-y-6 text-left font-body font-medium text-stone-950/90"
           >
             <p>
-              If you're looking to offer something refreshing, easy to drink,
-              and genuinely different; Goacha fits right in. We partner with
-              curated stores and menus across Goa.
+              Partnering with places that value quality and great taste across
+              Goa. If you're looking to offer something refreshing, easy to
+              drink, and genuinely different, Goacha fits right in.
             </p>
 
             <div className="flex flex-col gap-3">
