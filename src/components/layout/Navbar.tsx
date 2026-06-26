@@ -82,8 +82,13 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="flex items-center gap-4">
-          <Button asChild variant="solid" theme="brand">
+        <div className="flex items-center gap-2 md:gap-4">
+          <Button
+            asChild
+            variant="solid"
+            theme="brand"
+            className="hidden md:flex"
+          >
             <a
               href={getWhatsAppUrl(
                 "Hi, I'd like to enquire about Goacha Kombucha.",
@@ -91,8 +96,20 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <MessageCircle size={13} strokeWidth={1.5} />
-              <span className="hidden sm:inline">Enquire</span>
+              <MessageCircle size={20} strokeWidth={1.5} />
+              <span className="hidden md:inline">Enquire</span>
+            </a>
+          </Button>
+          <Button asChild variant="ghost" size="icon" className="md:hidden">
+            <a
+              href={getWhatsAppUrl(
+                "Hi, I'd like to enquire about Goacha Kombucha.",
+              )}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MessageCircle size={20} strokeWidth={2.5} />
+              <span className="hidden md:inline">Enquire</span>
             </a>
           </Button>
           <Button asChild variant="ghost" size="icon" theme="brand">
@@ -100,19 +117,20 @@ export default function Navbar() {
               href="https://www.instagram.com/goacha_"
               target="_blank"
               rel="noopener noreferrer"
-              className=" btn-goacha !p-2 flex items-center justify-center text-gc-cream"
+              className=" btn-goacha !p-1 flex items-center justify-center text-gc-cream"
             >
-              <SiInstagram className="size-3 md:size-5 " />
+              <SiInstagram className="size-5" />
             </a>
           </Button>
 
-          <button
-            className="md:hidden btn-goacha !p-2 flex items-center justify-center text-gc-cream"
+          <Button
+            className="md:hidden  flex items-center justify-center text-gc-cream border-0"
             onClick={() => setIsMenuOpen(true)}
             aria-label="Open Menu"
+            size="icon"
           >
-            <Menu size={13} strokeWidth={1.5} />
-          </button>
+            <Menu size={20} strokeWidth={2.5} />
+          </Button>
         </div>
       </motion.nav>
 
