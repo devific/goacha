@@ -62,12 +62,12 @@ export default function HeroSection() {
           src={`${IMAGEKIT_BASE_URL}/hero-right.jpg?tr=w-1920,h-1080,fo-auto,q-85`}
           alt="Goacha Kombucha"
           className="
-    absolute inset-0
-    w-full h-full
-    object-cover
-    object-center
-    lg:object-right
-  "
+            absolute inset-0
+            w-full h-full
+            object-cover
+            object-center
+            lg:object-[right_50px]
+          "
           loading="eager"
           referrerPolicy="no-referrer"
         />
