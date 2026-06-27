@@ -31,15 +31,15 @@ export default function AboutSection({ onScrollHint }: Props) {
           </motion.div>
 
           <motion.h2
-            className="font-display text-[clamp(2.5rem,5vw,4rem)] text-stone-950 leading-[1.05] mb-6 md:mb-8"
+            className="font-display text-[clamp(2rem,2vw,3rem)] text-stone-950 leading-[1.05] mb-6 md:mb-8"
             initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            Small Batch
+            Small Batch.
             <br />
-            Raw & Unpasteurized
+            Raw & Unpasteurized.
           </motion.h2>
 
           <motion.p

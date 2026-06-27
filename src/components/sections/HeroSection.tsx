@@ -62,12 +62,12 @@ export default function HeroSection() {
           src={`${IMAGEKIT_BASE_URL}/hero-right.jpg?tr=w-1920,h-1080,fo-auto,q-85`}
           alt="Goacha Kombucha"
           className="
-    absolute inset-0
-    w-full h-full
-    object-cover
-    object-center
-    lg:object-right
-  "
+            absolute inset-0
+            w-full h-full
+            object-cover
+            object-center
+            lg:object-[right_50px]
+          "
           loading="eager"
           referrerPolicy="no-referrer"
         />
@@ -146,7 +146,7 @@ export default function HeroSection() {
           className="
             font-display
             text-[clamp(1.75rem,4vw,3rem)]
-            lg:text-[clamp(3rem,6vw,5.5rem)]
+            lg:text-[clamp(2.5rem,5.5vw,5rem)]
             text-[#F2EDE4]
             mb-2
             lg:mb-5
