@@ -146,7 +146,7 @@ export default function HeroSection() {
           className="
             font-display
             text-[clamp(1.75rem,4vw,3rem)]
-            lg:text-[clamp(3rem,6vw,5.5rem)]
+            lg:text-[clamp(2.5rem,5.5vw,5rem)]
             text-[#F2EDE4]
             mb-2
             lg:mb-5
